@@ -1,0 +1,27 @@
+footer {
+    margin-top: 10%;
+    background-color: rgb(27, 26, 26);
+}
+
+.block-foot {
+    padding-top: 2%;
+    margin-bottom: 1%;
+    text-align: center;
+    color: aliceblue;
+}
+
+.bi-footer {
+    color: aliceblue;
+}
+
+li {
+    padding-right: 10%;
+}
+
+.first-item {
+    margin-left: 5%;
+}
+
+.logo-item {
+    margin-top: 0.5%;
+}
