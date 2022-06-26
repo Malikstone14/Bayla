@@ -32,6 +32,9 @@
 
 </head>
 
+{{-- NAVBAR LAYOUT --}}
+
+
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
@@ -42,6 +45,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            {{-- LES DIFFERENTES SECTIONS DE LA NAVBAR --}}
 
             <ul class="navbar-nav row col-12">
 
@@ -76,6 +81,8 @@
                 </li>
                 <li class="nav-item logo-item col-1">
 
+                    {{-- LOGO FB ET INSTA DE LA NAVBAR --}}
+
                     <a href="https://www.instagram.com/bayla_restaurant/?hl=fr">
                         <box-icon name='instagram' color="black" type='logo' animation='tada-hover'></box-icon>
                     </a>
@@ -94,7 +101,12 @@
 
 @yield('content')
 
+
+{{-- FOOTER DU LAYOUT --}}
+
 <footer class="row col-12">
+
+    {{-- PARTIE CONTACT DU FOOTER --}}
 
     <div id="footer-contact" class="block-foot col-4">
 
@@ -105,6 +117,8 @@
         </p>
 
     </div>
+
+    {{-- LOGO CENTRAL DU LAYOUT AVEC LOGO FB ET INSTA --}}
 
     <div class="block-foot col-4">
 
@@ -117,6 +131,8 @@
         </a>
 
     </div>
+
+    {{-- PARTIE DEDIEE A LA CONNEXION ADMIN --}}
 
     <div class="block-foot col-4">
 
