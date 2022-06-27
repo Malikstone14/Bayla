@@ -84,7 +84,8 @@
                     {{-- LOGO FB ET INSTA DE LA NAVBAR --}}
 
                     <a href="https://www.instagram.com/bayla_restaurant/?hl=fr">
-                        <box-icon name='instagram' color="black" type='logo' animation='tada-hover'></box-icon>
+                        <box-icon name='instagram' color="black" type='logo' animation='tada-hover'>
+                        </box-icon>
                     </a>
                     <a href="https://www.facebook.com/baylarestaurant">
                         <box-icon name='facebook' color='black' type='logo' animation='tada-hover'>
@@ -104,43 +105,44 @@
 
 {{-- FOOTER DU LAYOUT --}}
 
-<footer class="row col-12">
+<footer class="col-12">
 
     {{-- PARTIE CONTACT DU FOOTER --}}
+    <div class="row">
+        <div id="footer-contact" class="block-foot col-4">
 
-    <div id="footer-contact" class="block-foot col-4">
+            <p>Bayla Restaurant <br>
+                47 Rue Écuyère, 14000 Caen <br>
+                02.31.91.20.83 <br>
+                <a href="reservation">Réservation</a>
+            </p>
 
-        <p>Bayla Restaurant <br>
-            47 Rue Écuyère, 14000 Caen <br>
-            02.31.91.20.83 <br>
-            <a href="reservation">Réservation</a>
-        </p>
+        </div>
 
+        {{-- LOGO CENTRAL DU LAYOUT AVEC LOGO FB ET INSTA --}}
+
+        <div class="block-foot col-4">
+
+            <img src="/image/logoB.png" alt="logoB" style="padding-bottom: 3%"><br>
+            <a href="https://www.facebook.com/baylarestaurant">
+                <box-icon name='facebook-circle' color='white' type='logo' animation='tada-hover'></box-icon>
+            </a>
+            <a href="https://www.instagram.com/bayla_restaurant/?hl=fr">
+                <box-icon name='instagram' color="white" type='logo' animation='tada-hover'></box-icon>
+            </a>
+
+        </div>
+
+        {{-- PARTIE DEDIEE A LA CONNEXION ADMIN --}}
+
+        <div class="block-foot col-4">
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus accusantium atque quo, totam maiores
+                iure
+            </p>
+
+        </div>
     </div>
-
-    {{-- LOGO CENTRAL DU LAYOUT AVEC LOGO FB ET INSTA --}}
-
-    <div class="block-foot col-4">
-
-        <img src="/image/logoB.png" alt="logoB" style="padding-bottom: 3%"><br>
-        <a href="https://www.facebook.com/baylarestaurant">
-            <box-icon name='facebook-circle' color='white' type='logo' animation='tada-hover'></box-icon>
-        </a>
-        <a href="https://www.instagram.com/bayla_restaurant/?hl=fr">
-            <box-icon name='instagram' color="white" type='logo' animation='tada-hover'></box-icon>
-        </a>
-
-    </div>
-
-    {{-- PARTIE DEDIEE A LA CONNEXION ADMIN --}}
-
-    <div class="block-foot col-4">
-
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus accusantium atque quo, totam maiores iure
-        </p>
-
-    </div>
-
 </footer>
 
 </html>

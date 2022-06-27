@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ConnexionControler;
+use App\Http\Controllers\HomeControler;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeControler::class, "index"]);
+
 Route::get('carte', function () {
     return view('carte');
 });
@@ -30,4 +31,12 @@ Route::get('galerie', function () {
 });
 Route::get('reservation', function () {
     return view('reservation');
+});
+
+Route::get('connexion', [ConnexionControler::class, "formulaire"]);
+Route::post('connexion', [ConnexionControler::class, "traitementConnexion"]);
+
+
+Route::get('db', function () {
+    return view('db');
 });
