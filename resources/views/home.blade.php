@@ -2,54 +2,94 @@
 
 
 @section('content')
-    <div>
-        <div id="carrousel" class="carousel slide carousel-fade" data-ride="carousel">
-            <!-- Indicateurs -->
-            <ul class="carousel-indicators">
-                <li data-target="carrousel" data-slide-to="0" class="active"></li>
-                <li data-target="carrousel" data-slide-to="1"></li>
-                <li data-target="carrousel" data-slide-to="2"></li>
-            </ul>
+    <div id="carrousel" class="carousel slide carousel-fade" data-pause="false" data-ride="carousel">
 
-            <!-- Carrousel -->
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-interval="4000">
-                    <img src="image/slide1.jpg" alt="Carrousel slide 1" class="d-block w-100">
-                </div>
-                <div class="carousel-item" data-interval="2000">
-                    <img src="image/slide2.jpg" alt="Carrousel slide 2" class="d-block w-100">
-                </div>
-                <div class="carousel-item" data-interval="1000">
-                    <img src="image/slide1.jpg" alt="Carrousel slide 3" class="d-block w-100">
-                </div>
-            </div>
+        <!-- Carrousel -->
+        @auth
+            <a href="carrousel">
+                <box-icon name='edit' class='edit-carrousel' color='white' type='solid' animation='tada'>
+                </box-icon>
+            </a>
+        @endauth
+        <div class="carousel-inner">
 
-            <!-- Contrôles -->
-            <a class="carousel-control-prev" href="#carrousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only"></span>
-            </a>
-            <a class="carousel-control-next" href="#carrousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only"></span>
-            </a>
+            @foreach ($carrouselActive as $key => $carrouselActive)
+                <div class="carousel-item {{ $key == 0 ? 'active' : '' }}" data-interval="4000">
+                    <img src="/image/{{ $carrouselActive->chemin }}" alt="{{ $carrouselActive->chemin }}"
+                        class="d-block w-100">
+                    <div class="text-container carousel-caption">
+                        <a href="{{ $carrouselActive->URL }}">
+                            <h4>{{ $carrouselActive->titre }}</h4>
+                            <p>{{ $carrouselActive->texte }}</p>
+                        </a>
+                    </div>
+                </div>
+            @endforeach
         </div>
+
     </div>
 
+    <!-- Contrôles -->
+    <a class="carousel-control-prev" href="#carrousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only"></span>
+    </a>
+    <a class="carousel-control-next" href="#carrousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only"></span>
+    </a>
+
     <div id="presentation">
-        <h1>Bienvenue chez Bayla Restaurant</h1>
+        @auth
+            <box-icon class='btn-edit' data-toggle="modal" data-target="#exampleModal" name='edit' class='edit-carrousel'
+                color='black' type='solid' animation='tada'></box-icon>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <form action="{{ route('hometexte.update', $homeTexte[0]->id) }}" method="POST">
+                    @csrf
+                    @method('PUT')
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modifier</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Titre</label>
+                                    <input type="text" name="home_titre" class="form-control"
+                                        value="{{ $homeTexte[0]->home_titre }}" id="recipient-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Texte</label>
+                                    <textarea class="form-control" name="home_texte" value="{{ $homeTexte[0]->home_texte }}" id="message-text">{{ $homeTexte[0]->home_texte }}</textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Retour</button>
+                                <button type="submit" class="btn btn-primary">Modifier</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+        @endauth
+        <h1>{{ $homeTexte[0]->home_titre }}</h1>
         <hr class="separator">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere omnis eveniet, tempore nostrum unde adipisci
-            recusandae placeat accusantium voluptatibus, eligendi illum minima. Ex neque vitae tempora quia reprehenderit
-            iste ipsum!Laboriosam harum expedita nisi officiis non accusantium, exercitationem beatae repellat dignissimos.
-            Perspiciatis excepturi repellat laboriosam exercitationem, expedita praesentium eaque nihil deserunt sequi omnis
-            tempora ratione quis neque dicta maiores obcaecati. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Earum aliquid nihil at rerum voluptate? Facere perferendis eius, inventore velit corrupti voluptates delectus,
-            debitis ipsa earum architecto culpa perspiciatis quo dolorem!
-            Commodi alias quod veritatis consectetur. Adipisci aliquam nemo vitae pariatur cum laborum ipsam nulla tempore!
+        <p>{{ $homeTexte[0]->home_texte }}
         </p>
         <hr class="separator">
     </div>
+    @auth
+        <a href="carrousel">
+            <box-icon class='btn-edit' name='edit' class='edit-carrousel' color='black' type='solid' animation='tada'>
+            </box-icon>
+        </a>
+    @endauth
     <h1 class="titre-block">On parle de nous ! </h1>
     <div id="présentationArticle" class=" row col-12">
 
@@ -84,7 +124,9 @@
                 <img src="/image/Article-Actu.jpg" class="card-img-top" alt="articleActu"></a>
             <div class="card-body">
                 <h5 class="card-title">Liberté</h5>
-                <p class="card-text">Bayla, le restaurant de Caen qui assure un service continu en cuisine de midi à minuit
+                <p class="card-text">Bayla, le restaurant de Caen qui assure un service continu en cuisine de
+                    midi à
+                    minuit
                     !</p>
             </div>
         </div>

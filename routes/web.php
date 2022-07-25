@@ -1,8 +1,11 @@
 <?php
 
-use App\Http\Controllers\ConnexionControler;
-use App\Http\Controllers\HomeControler;
+use App\Http\Controllers\CarrouselController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeControler;
+use App\Http\Controllers\ConnexionControler;
+use App\Http\Controllers\HomeTexteController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,10 +36,12 @@ Route::get('reservation', function () {
     return view('reservation');
 });
 
-Route::get('connexion', [ConnexionControler::class, "formulaire"]);
-Route::post('connexion', [ConnexionControler::class, "traitementConnexion"]);
+Route::resource('carrousel', CarrouselController::class);
+Route::resource('hometexte', HomeTexteController::class);
+// 
 
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
-Route::get('db', function () {
-    return view('db');
-});
+require __DIR__ . '/auth.php';

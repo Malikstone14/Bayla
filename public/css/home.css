@@ -1,3 +1,7 @@
+* {
+    text-decoration: none !important;
+}
+
 #presentation {
     margin-top: 10%;
     margin-left: 15%;
@@ -30,4 +34,63 @@
 
 .card-body {
     height: 25%;
+}
+
+.carousel-caption {
+    position: absolute;
+    z-index: 10;
+    background: black;
+    left: 0;
+    bottom: 0;
+    opacity: 50%;
+    color: white;
+    width: 100%;
+    height: 20%;
+    padding-left: 5%;
+    text-align: start;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+
+    height: 75%;
+}
+
+
+.text-container {
+    width: 100%;
+    padding-bottom: 4rem;
+    visibility: hidden;
+    transform: translateY(0%);
+    opacity: 0;
+    transition: all .4s ease;
+    background: linear-gradient(15deg, black 10%, transparent 60%);
+    color: white;
+    overflow: hidden;
+}
+
+.text {
+    position: relative;
+}
+
+.active .text-container {
+    visibility: visible;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.edit-carrousel {
+    position: absolute;
+    z-index: 2;
+    margin: 1%;
+}
+
+.btn-edit {
+    position: absolute;
+    left: 1%;
 }
