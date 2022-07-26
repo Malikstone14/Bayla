@@ -94,3 +94,47 @@ a {
     position: absolute;
     left: 1%;
 }
+
+.grostitre {
+    position: absolute;
+    font-size: 700%;
+    opacity: 0.2;
+    letter-spacing: 4rem;
+    text-transform: uppercase;
+    color: teal;
+}
+
+.petittitre {
+    z-index: 1;
+    margin: 30px;
+}
+
+.grostitre.presse {
+    position: absolute;
+    font-size: 700%;
+    opacity: 0.2;
+    letter-spacing: 9rem;
+    text-transform: uppercase;
+    color: teal;
+}
+
+#presentationarticle {
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+#presentation-article {
+    margin-top: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+}
+
+.grostitre.avis {
+    position: absolute;
+    font-size: 700%;
+    opacity: 0.2;
+    letter-spacing: 5rem;
+    text-transform: uppercase;
+    color: teal;
+}

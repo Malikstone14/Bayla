@@ -40,7 +40,7 @@
 {{-- NAVBAR LAYOUT --}}
 
 
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" style="width: 100%">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light ">
     <div class="container-fluid">
         <a class="navbar-brand col-1" href="/">
             <img src="/image/logo.png" alt="logo" margin-right=20% width="130" height="60">
@@ -56,44 +56,29 @@
             <ul class="navbar-nav col-12 ">
 
                 <li class="nav-item first-item col-2">
-                    <a class="nav-link " href="/carte">Notre Carte</a>
+                    <a class="nav-link " href="carte">Notre Carte</a>
                 </li>
                 <li class="nav-item col-2">
-                    <a class="nav-link " href="/reservation">Réservation</a>
+                    <a class="nav-link " href="reservation">Réservation</a>
                 </li>
                 <li class="nav-item col-2">
-                    <a class="nav-link" href="/galerie">Galerie Photo</a>
+                    <a class="nav-link" href="galerie">Galerie Photo</a>
                 </li>
                 <li class="nav-item col-2">
-                    <a class="nav-link" href="/evenement">Evénements</a>
+                    <a class="nav-link" href="evenement">Evénements</a>
                 </li>
-                <li class="nav-item dropdown col-2">
-
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="true">
-                        A Propos
-                    </a>
-
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-                        <li><a class="dropdown-item" href="contact">Contactez-Nous</a></li>
-                        <li><a class="dropdown-item" href="recrutement">Rejoignez-Nous</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
+                <li class="nav-item col-2">
+                    <a class="nav-link" href="contact">Contactez-Nous</a>
                 <li class="nav-item logo-item col-2">
 
                     {{-- LOGO FB ET INSTA DE LA NAVBAR --}}
 
                     <a href="https://www.instagram.com/bayla_restaurant/?hl=fr">
-                        <box-icon name='instagram' color="black" type='logo' animation='tada-hover'>
+                        <box-icon name='instagram' color="white" type='logo' animation='tada-hover'>
                         </box-icon>
                     </a>
                     <a href="https://www.facebook.com/baylarestaurant">
-                        <box-icon name='facebook' color='black' type='logo' animation='tada-hover'>
+                        <box-icon name='facebook' color='white' type='logo' animation='tada-hover'>
                         </box-icon>
                     </a>
                 </li>

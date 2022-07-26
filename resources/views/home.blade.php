@@ -78,11 +78,16 @@
 
 
         @endauth
-        <h1>{{ $homeTexte[0]->home_titre }}</h1>
-        <hr class="separator">
-        <p>{{ $homeTexte[0]->home_texte }}
-        </p>
-        <hr class="separator">
+        <div class="parent">
+            <div class="grostitre">{{ $homeTexte[0]->home_titre }}</div>
+            <br>
+            <br>
+            <h1 class="petittitre">{{ $homeTexte[0]->home_titre }}</h1>
+
+            <p>{{ $homeTexte[0]->home_texte }}
+            </p>
+            <hr class="separator">
+        </div>
     </div>
     @auth
         <a href="carrousel">
@@ -90,8 +95,16 @@
             </box-icon>
         </a>
     @endauth
-    <h1 class="titre-block">On parle de nous ! </h1>
-    <div id="présentationArticle" class=" row col-12">
+    <div id="presentation-article">
+        <div class="parent">
+            <div class="grostitre presse">Presse</div>
+            <br>
+            <br>
+            <h1 class="petittitre">On parle de nous ! </h1>
+        </div>
+    </div>
+    <hr class="separator">
+    <div id="presentationarticle" class=" row col-12">
 
         <div class="card card-home col-3">
 
@@ -107,9 +120,8 @@
 
         <div class="card card-home col-3">
 
-            <a href="https://www.tendanceouest.com/actualite-397240-bonne-table-a-caen-bayla-une-table-sophistiquee-mais-decontractee"
-                target="_blank">
-                <img src="/image/Article-Tendance.jpg" class="card-img-top" alt="articleActu"></a>
+
+            <img src="/image/Article-Tendance.jpg" class="card-img-top" alt="articleActu"></a>
             <div class="card-body">
                 <h5 class="card-title">Tendance Ouest</h5>
                 <p class="card-text">Bonne table à Caen. Bayla, une table sophistiquée mais décontractée
@@ -132,4 +144,20 @@
         </div>
 
     </div>
+
+    <div id="presentation-article">
+        <div class="parent">
+            <div class="grostitre avis">Vos Avis</div>
+            <br>
+            <br>
+            <h1 class="petittitre">Parce que votre avis compte !</h1>
+        </div>
+    </div>
+    <hr class="separator">
+    <div class='widget-avis'>
+        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+        <div class="elfsight-app-c9f4621f-a47d-4f8a-a562-3d93bd1bb1ec"></div>
+    </div>
+    <br>
+    <br>
 @endsection

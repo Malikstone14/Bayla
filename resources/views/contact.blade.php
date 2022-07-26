@@ -5,35 +5,45 @@
     <link rel="stylesheet" href="/css/contact.css">
 
     <body>
-        <h1 class="titre">Une question ? N'hesitez pas à nous contacter</h1>
+
+        <body>
+
+            <div class="contact-container">
+                <div class="left-col">
+                </div>
+                <div class="right-col">
+                    <h1>Formulaire de contact</h1>
+
+                    <form id="contact-form" action="/action_page.php" method="post">
+                        <label for="name">Nom & Prénom</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom et prénom" required>
+                        <label for="sujet">Sujet</label>
+                        <input type="text" id="sujet" name="sujet" placeholder="L'objet de votre message">
+                        <label for="email">Adresse Email</label>
+                        <input type="email" id="email" name="email" placeholder="Votre adresse Mail" required>
+                        <label for="message">Message</label>
+                        <textarea rows="6" placeholder="Votre Message" id="message" name="message" required></textarea>
+                        <button type="submit" id="submit" name="submit">Envoyer</button>
+
+                    </form>
+                    <div id="error"></div>
+                    <div id="success-msg"></div>
+                </div>
+            </div>
+            <script src="script.js"></script>
+        </body>
+
+
+
+        {{-- <h1 class="titre">Une question ? N'hesitez pas à nous contacter</h1>
         <div class='onglet row col-12'>
             <button id='contactbtn' class="btn contact-onglet col-2">Contact</button>
-            <button id='reservationbtn' class='btn reservation-onglet col-2'>Reservation</button>
             <button id='recrutementbtn' class='btn recrutement-onglet col-2'>Nous Rejoindre</button>
         </div>
 
         <div class='container row col-12'>
             <div id='contact' class="contact col-6 shadow">
                 <h2>Formulaire de contact</h2>
-                <form action="/action_page.php">
-                    <label for="fname">Nom & prénom</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Votre nom et prénom">
-
-                    <label for="sujet">Sujet</label>
-                    <input type="text" id="sujet" name="sujet" placeholder="L'objet de votre message">
-
-                    <label for="emailAddress">Email</label>
-                    <input id="emailAddress" type="email" name="email" placeholder="Votre email">
-
-
-                    <label for="subject">Message</label>
-                    <textarea id="subject" name="subject" placeholder="Votre message" style="height:200px"></textarea>
-
-                    <input type="submit" value="Envoyer">
-                </form>
-            </div>
-            <div id='reservation' class="reservation col-6 shadow">
-                <h2>Réservation</h2>
                 <form action="/action_page.php">
                     <label for="fname">Nom & prénom</label>
                     <input type="text" id="fname" name="firstname" placeholder="Votre nom et prénom">
@@ -92,7 +102,7 @@
                     <p>Dimanche : Fermé (Sauf évenement prévu)</p>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <hr>
         <div class='widget-avis'>
             <script src="https://apps.elfsight.com/p/platform.js" defer></script>

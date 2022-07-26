@@ -35,8 +35,8 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Texte</strong>
-                                <textarea type="text" name="texte" value="{{ $carrousel->texte }}" class="form-control"
-                                    placeholder="Saisir un texte"></textarea>
+                                <input type="text" name="texte" value="{{ $carrousel->texte }}" class="form-control"
+                                    placeholder="Saisir un texte">
                             </div>
                         </div>
                     </div>
