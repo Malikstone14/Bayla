@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('carrousels', function (Blueprint $table) {
+        Schema::create('carrousel_presses', function (Blueprint $table) {
             $table->increments('id');
             $table->string('titre');
             $table->string('texte');
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('carrousels');
+        Schema::dropIfExists('carrousel_presses');
     }
 };

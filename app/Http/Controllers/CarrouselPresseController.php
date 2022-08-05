@@ -2,18 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Carrousel;
+use App\Models\CarrouselPresse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 
-class CarrouselController extends Controller
+class CarrouselPresseController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        $carrousel = Carrousel::orderBy('ordre', 'asc')->get();
+        $carrouselpresse = CarrouselPresse::orderBy('ordre', 'asc')->get();
 
 
-        return view('carrousel.index', compact('carrousel'))
+        return view('carrouselpresse.index', compact('carrouselpresse'))
             ->with('i', (request()->input('page', 1) - 1) * 4);
     }
 
@@ -24,8 +28,8 @@ class CarrouselController extends Controller
      */
     public function create()
     {
-        $carrousel = Carrousel::all();
-        return view('carrousel.create', compact('carrousel'));
+        $carrouselpresse = CarrouselPresse::all();
+        return view('carrouselpresse.create', compact('carrouselpresse'));
     }
 
     /**
@@ -42,65 +46,67 @@ class CarrouselController extends Controller
             'ordre' => 'required',
         ]);
 
-        Carrousel::create($request->all());
+        CarrouselPresse::create($request->all());
 
-        return redirect()->route('carrousel.index')
+        return redirect()->route('carrouselpresse.index')
             ->with('success', 'Onglet de carrousel créé avec succès.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Carrousel  $client
+     * @param  \App\Models\CarrouselPresse  $carrouselPresse
      * @return \Illuminate\Http\Response
      */
-    public function show(Carrousel $carrousel)
+    public function show(CarrouselPresse $carrouselPresse)
     {
-        return view('carrousel.show', compact('carrousel'));
+        return view('carrouselpresse.show', compact('carrouselpresse'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Carrousel  $client
+     * @param  \App\Models\CarrouselPresse  $carrouselPresse
      * @return \Illuminate\Http\Response
      */
-    public function edit(Carrousel $carrousel, Request $request)
+    public function edit(CarrouselPresse $carrouselpresse, Request $request)
     {
-        return view('carrousel.edit', compact('carrousel'));
+        
+        return view('carrouselpresse.edit', compact('carrouselpresse'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Carrousel  $client
+     * @param  \App\Models\CarrouselPresse  $carrouselPresse
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Carrousel $carrousel)
+    public function update(Request $request, CarrouselPresse $carrouselpresse)
     {
         $request->validate([
             'titre' => 'required',
             'texte' => 'required',
             'ordre' => 'required',
             'URL' => 'required',
+            'chemin' => 'required'
         ]);
-        $carrousel->update($request->all());
-        return redirect()->route('carrousel.index')
+        $carrouselpresse->update($request->all());
+        return redirect()->route('carrouselpresse.index')
             ->with('success', 'Votre carrousel a été mis à jour avec succès');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Carrousel  $client
+     * @param  \App\Models\CarrouselPresse  $carrouselPresse
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Carrousel $carrousel)
+    public function destroy(CarrouselPresse $carrouselpresse)
     {
-        $carrousel->delete();
+        $carrouselpresse->delete();
 
-        return redirect()->route('carrousel.index')
+        return redirect()->route('carrouselpresse.index')
             ->with('success', 'Votre onglet de carrousel a été supprimé avec succès');
     }
 }

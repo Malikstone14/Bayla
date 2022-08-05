@@ -13,7 +13,6 @@
 .separator {
     margin-top: 5%;
     margin-bottom: 5%;
-    width: 50%;
 }
 
 .titre-block {
@@ -22,8 +21,6 @@
 }
 
 .card-home {
-    margin-left: 5%;
-    margin-right: 3%;
     padding: 0%;
 }
 
@@ -53,7 +50,7 @@
 .carousel-control-next,
 .carousel-control-prev {
 
-    height: 75%;
+    height: 90%;
 }
 
 
@@ -98,10 +95,11 @@ a {
 .grostitre {
     position: absolute;
     font-size: 700%;
-    opacity: 0.2;
+    opacity: 0.1;
     letter-spacing: 4rem;
     text-transform: uppercase;
     color: teal;
+    width: 75%;
 }
 
 .petittitre {
@@ -112,29 +110,120 @@ a {
 .grostitre.presse {
     position: absolute;
     font-size: 700%;
-    opacity: 0.2;
-    letter-spacing: 9rem;
+    opacity: 0.1;
+    letter-spacing: 5rem;
     text-transform: uppercase;
     color: teal;
+    width: 75%;
 }
 
-#presentationarticle {
-    margin-top: 5%;
-    margin-bottom: 10%;
-}
 
 #presentation-article {
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 15%;
     margin-right: 15%;
     text-align: center;
 }
 
+.widget-avis {
+    padding-top: 5%;
+}
+
 .grostitre.avis {
     position: absolute;
     font-size: 700%;
-    opacity: 0.2;
+    opacity: 0.1;
     letter-spacing: 5rem;
     text-transform: uppercase;
     color: teal;
+    width: 75%;
+}
+
+
+/* CARROUSSEL PRESSE */
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+#presentationarticle {
+
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+
+    -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, #0004);
+
+    transform-origin: center;
+    transform: perspective(1000px) rotateY(25deg);
+    transition: 0.5s;
+}
+
+.container-presse {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.card:hover {
+    opacity: 0.3;
+}
+
+.card:hover {
+    transform: perspective(800px) rotateY(0deg);
+    opacity: 1;
+}
+
+.img-presse {
+
+    height: 20vh;
+    width: -webkit-fill-available;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+}
+
+
+.carousel-inner.presse {
+    padding-top: 5%;
+    padding-bottom: 15%;
+    width: 97%;
+    margin-left: 7%;
+}
+
+.btn-presse{
+    background-color: teal !important;
+    border-color: teal !important;
+    color: white;
+}
+
+.carousel-control-prev-icon.presse,
+.carousel-control-next-icon.presse {
+    filter: invert(1);
+
+}
+
+.carousel-control-prev.presse {
+    max-width: 8vh;
+}
+
+.carousel-control-next.presse {
+    max-width: 10vh;
+}
+
+.carousel.presse{
+    width: 80%;
 }

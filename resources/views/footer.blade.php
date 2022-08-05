@@ -35,11 +35,14 @@
             @guest
                 <a href="login">Connexion</a>
             @endguest
-
             @auth
+
                 {{ Auth::user()->email }}
+                <br>
+                <a href="{{ route('register') }}">Creer un compte</a>
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
+                    <br>
                     <button type="submit" class="btn btn-outline-danger">Déconnexion</button>
                 </form>
             @endauth

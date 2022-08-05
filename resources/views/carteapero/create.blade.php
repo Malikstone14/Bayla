@@ -3,7 +3,7 @@
     @section('content')
 
 
-        <h2 style="margin: 2%">Ajouter une nouvelle image</h2>
+        <h2 style="margin: 2%">Ajouter un nouvel article</h2>
 
 
         @if ($errors->any())
@@ -17,24 +17,24 @@
             </div>
         @endif
 
-        <form action="{{ route('carrouselpresse.store') }}" method="POST">
+        <form action="{{ route('carteapero.store') }}" method="POST">
             @csrf
 
             <div class="container-edit">
                 <div class="row col-12">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
-                            <strong>Texte</strong>
-                            <textarea type="text" name="texte" value="" class="form-control" placeholder="Saisir un texte"></textarea>
+                            <strong>Nom</strong>
+                            <input type="text" name="nom" value="" class="form-control"
+                                placeholder="Saisir le nom">
                         </div>
                     </div>
                 </div>
                 <div class="row col-12">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
-                            <strong>Titre</strong>
-                            <input type="text" name="titre" value="" class="form-control"
-                                placeholder="Saisir le titre">
+                            <strong>Ingrédients ou détails</strong>
+                            <textarea type="text" name="ingrédient" value="" class="form-control" placeholder="Saisir vos ingrédients ou vos détails"></textarea>
                         </div>
                     </div>
                 </div>
@@ -46,11 +46,11 @@
                                 placeholder="Saisir un stock">
                         </div>
                     </div>
-                    <div class="col-xs-9 col-sm-9 col-md-9">
+                    <div class="col-xs-3 col-sm-3 col-md-3">
                         <div class="form-group">
-                            <strong>URL</strong>
-                            <input type="text" name="URL" value="" class="form-control"
-                                placeholder="Saisir un URL">
+                            <strong>Prix</strong>
+                            <input type="number" name="prix" value="" class="form-control"
+                                placeholder="Saisir un prix">
                         </div>
                     </div>
                 </div>
@@ -65,18 +65,10 @@
                         </select>
                     </div>
                 </div>
-                <div style="margin-top:1%" class="row col-12">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Inserer une nouvelle image (Conseil : 1900x888p)</strong>
-                            <input type="file" name="chemin" value="" class="form-control">
-                        </div>
-                    </div>
-                </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center pt-4">
                     <button type="submit" class="btn btn-primary">Soumettre</button>
-                    <a class="btn btn-danger" href="{{ route('carrouselpresse.index') }}"> Retour</a>
+                    <a class="btn btn-danger" href="{{ route('carteapero.index') }}"> Retour</a>
                 </div>
             </div>
         </form>

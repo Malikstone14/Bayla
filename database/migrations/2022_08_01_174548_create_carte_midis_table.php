@@ -13,14 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('carrousels', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('titre');
-            $table->string('texte');
-            $table->integer('ordre');
-            $table->string('chemin');
+        Schema::create('carte_midis', function (Blueprint $table) {
+            $table->id();
+            $table->string('nom');
+            $table->enum('section' , ['entree','plat','dessert']);
+            $table->string('ingredient');
             $table->boolean('active')->default(1);
-            $table->string('URL');
+            $table->integer('ordre');
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('carrousels');
+        Schema::dropIfExists('carte_midis');
     }
 };

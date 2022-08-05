@@ -2,18 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Carrousel;
+use App\Models\CarteApero;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 
-class CarrouselController extends Controller
+class CarteAperoController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        $carrousel = Carrousel::orderBy('ordre', 'asc')->get();
+        $carteapero = CarteApero::orderBy('ordre', 'asc')->orderBy('active', 'desc')->get();
 
-
-        return view('carrousel.index', compact('carrousel'))
+        return view('carteapero.index', compact('carteapero'))
             ->with('i', (request()->input('page', 1) - 1) * 4);
     }
 
@@ -24,8 +27,8 @@ class CarrouselController extends Controller
      */
     public function create()
     {
-        $carrousel = Carrousel::all();
-        return view('carrousel.create', compact('carrousel'));
+        $carteapero = CarteApero::all();
+        return view('carteapero.create', compact('carteapero'));
     }
 
     /**
@@ -37,70 +40,69 @@ class CarrouselController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'titre' => 'required',
-            'texte' => 'required',
+            'nom' => 'required',
+            'prix' => 'required',
             'ordre' => 'required',
         ]);
 
-        Carrousel::create($request->all());
+        CarteApero::create($request->all());
 
-        return redirect()->route('carrousel.index')
+        return redirect()->route('carteapero.index')
             ->with('success', 'Onglet de carrousel créé avec succès.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Carrousel  $client
+     * @param  \App\Models\CarteApero  $carteapero
      * @return \Illuminate\Http\Response
      */
-    public function show(Carrousel $carrousel)
+    public function show(CarteApero $carteapero)
     {
-        return view('carrousel.show', compact('carrousel'));
+        return view('carteapero.show', compact('carteapero'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Carrousel  $client
+     * @param  \App\Models\carteapero  $carteapero
      * @return \Illuminate\Http\Response
      */
-    public function edit(Carrousel $carrousel, Request $request)
+    public function edit(CarteApero $carteapero , Request $request)
     {
-        return view('carrousel.edit', compact('carrousel'));
+        return view('carteapero.edit', compact('carteapero'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Carrousel  $client
+     * @param  \App\Models\carteapero  $carteapero
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Carrousel $carrousel)
+    public function update(Request $request, CarteApero $carteapero)
     {
         $request->validate([
-            'titre' => 'required',
-            'texte' => 'required',
+            'nom' => 'required',
+            'prix' => 'required',
             'ordre' => 'required',
-            'URL' => 'required',
         ]);
-        $carrousel->update($request->all());
-        return redirect()->route('carrousel.index')
+        $carteapero->update($request->all());
+        return redirect()->route('carteapero.index')
             ->with('success', 'Votre carrousel a été mis à jour avec succès');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Carrousel  $client
+     * @param  \App\Models\CarteApero  $carteapero
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Carrousel $carrousel)
+    public function destroy(CarteApero $carteapero)
     {
-        $carrousel->delete();
+        $carteapero->delete();
 
-        return redirect()->route('carrousel.index')
+        return redirect()->route('carteapero.index')
             ->with('success', 'Votre onglet de carrousel a été supprimé avec succès');
     }
 }

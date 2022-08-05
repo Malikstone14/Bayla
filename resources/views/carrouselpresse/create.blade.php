@@ -3,7 +3,7 @@
     @section('content')
 
 
-        <h2 style="margin: 2%">Ajouter une nouvelle image</h2>
+        <h2 style="margin: 2%">Ajouter un nouvel article</h2>
 
 
         @if ($errors->any())
@@ -68,7 +68,7 @@
                 <div style="margin-top:1%" class="row col-12">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
-                            <strong>Inserer une nouvelle image (Conseil : 1900x888p)</strong>
+                            <strong>Inserer une nouvelle image</strong>
                             <input type="file" name="chemin" value="" class="form-control">
                         </div>
                     </div>

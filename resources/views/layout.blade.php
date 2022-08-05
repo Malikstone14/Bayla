@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bayla Restaurant</title>
+
+
 </head>
 
 
 <title>Laravel</title>
 
 <!-- Fonts -->
-
+<script src="../js/mediascreen.js"></script>
+<script src="/js/carte.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -25,6 +28,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
 </script>
+
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
@@ -56,19 +60,19 @@
             <ul class="navbar-nav col-12 ">
 
                 <li class="nav-item first-item col-2">
-                    <a class="nav-link " href="carte">Notre Carte</a>
+                    <a class="nav-link " href="{{ asset('carte')}}">Notre Carte</a>
                 </li>
                 <li class="nav-item col-2">
-                    <a class="nav-link " href="reservation">Réservation</a>
+                    <a class="nav-link " href="{{ asset('reservation')}}">Réservation</a>
                 </li>
                 <li class="nav-item col-2">
-                    <a class="nav-link" href="galerie">Galerie Photo</a>
+                    <a class="nav-link" href="{{ asset('galerie')}}">Galerie Photo</a>
                 </li>
                 <li class="nav-item col-2">
-                    <a class="nav-link" href="evenement">Evénements</a>
+                    <a class="nav-link" href="{{ asset('evenement')}}">Evénements</a>
                 </li>
                 <li class="nav-item col-2">
-                    <a class="nav-link" href="contact">Contactez-Nous</a>
+                    <a class="nav-link" href="{{ asset('contact')}}">Contactez-Nous</a>
                 <li class="nav-item logo-item col-2">
 
                     {{-- LOGO FB ET INSTA DE LA NAVBAR --}}
@@ -90,4 +94,3 @@
 
 @yield('content')
 @extends('footer')
-<script src="/js/contact.js"></script>

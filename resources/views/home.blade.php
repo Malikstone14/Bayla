@@ -13,14 +13,14 @@
         @endauth
         <div class="carousel-inner">
 
-            @foreach ($carrouselActive as $key => $carrouselActive)
+            @foreach ($carrouselActive as $key => $ongletCarrousel)
                 <div class="carousel-item {{ $key == 0 ? 'active' : '' }}" data-interval="4000">
-                    <img src="/image/{{ $carrouselActive->chemin }}" alt="{{ $carrouselActive->chemin }}"
+                    <img src="/image/{{ $ongletCarrousel->chemin }}" alt="{{ $ongletCarrousel->chemin }}"
                         class="d-block w-100">
                     <div class="text-container carousel-caption">
-                        <a href="{{ $carrouselActive->URL }}">
-                            <h4>{{ $carrouselActive->titre }}</h4>
-                            <p>{{ $carrouselActive->texte }}</p>
+                        <a href="{{ $ongletCarrousel->URL }}">
+                            <h4>{{ $ongletCarrousel->titre }}</h4>
+                            <p>{{ $ongletCarrousel->texte }}</p>
                         </a>
                     </div>
                 </div>
@@ -78,82 +78,78 @@
 
 
         @endauth
-        <div class="parent">
-            <div class="grostitre">{{ $homeTexte[0]->home_titre }}</div>
-            <br>
-            <br>
-            <h1 class="petittitre">{{ $homeTexte[0]->home_titre }}</h1>
 
-            <p>{{ $homeTexte[0]->home_texte }}
-            </p>
-            <hr class="separator">
-        </div>
+        <div class="grostitre">{{ $homeTexte[0]->home_titre }}</div>
+        <br>
+        <br>
+        <h1 class="petittitre">{{ $homeTexte[0]->home_titre }}</h1>
+
+        <p>{{ $homeTexte[0]->home_texte }}
+        </p>
+        <hr class="separator">
     </div>
+
     @auth
-        <a href="carrousel">
+        <a href="carrouselpresse">
             <box-icon class='btn-edit' name='edit' class='edit-carrousel' color='black' type='solid' animation='tada'>
             </box-icon>
         </a>
     @endauth
     <div id="presentation-article">
-        <div class="parent">
-            <div class="grostitre presse">Presse</div>
-            <br>
-            <br>
-            <h1 class="petittitre">On parle de nous ! </h1>
-        </div>
-    </div>
-    <hr class="separator">
-    <div id="presentationarticle" class=" row col-12">
 
-        <div class="card card-home col-3">
-
-            <a href="https://www.ouest-france.fr/normandie/caen-14000/a-caen-bayla-la-belle-un-nouveau-restaurant-va-ouvrir-rue-ecuyere-0e3ad3d8-ae87-11ec-9246-65b3a25ae7f9"
-                target="_blank">
-                <img src="/image/Article-Ouest.jpg" class="card-img-top" alt="articleOuestFrance"></a>
-
-            <div class="card-body">
-                <h5 class="card-title">Ouest France</h5>
-                <p class="card-text">À Caen, Bayla la belle, un nouveau restaurant, va ouvrir rue Écuyère</p>
-            </div>
-        </div>
-
-        <div class="card card-home col-3">
-
-
-            <img src="/image/Article-Tendance.jpg" class="card-img-top" alt="articleActu"></a>
-            <div class="card-body">
-                <h5 class="card-title">Tendance Ouest</h5>
-                <p class="card-text">Bonne table à Caen. Bayla, une table sophistiquée mais décontractée
-                    !</p>
-            </div>
-        </div>
-
-        <div class="card card-home col-3">
-
-            <a href="https://www.tendanceouest.com/actualite-397240-bonne-table-a-caen-bayla-une-table-sophistiquee-mais-decontractee"
-                target="_blank">
-                <img src="/image/Article-Actu.jpg" class="card-img-top" alt="articleActu"></a>
-            <div class="card-body">
-                <h5 class="card-title">Liberté</h5>
-                <p class="card-text">Bayla, le restaurant de Caen qui assure un service continu en cuisine de
-                    midi à
-                    minuit
-                    !</p>
-            </div>
-        </div>
-
+        <div class="grostitre presse">Presse</div>
+        <br>
+        <br>
+        <h1 class="petittitre">On parle de nous !</h1>
+        <hr class="separator">
     </div>
 
+    <div class="container-presse">
+
+        <div id="carouselExampleControls" class="carousel presse slide" data-ride="carousel">
+            <div class="carousel-inner presse">
+
+                @foreach ($carrouselActivePresse as $key => $article)
+                    @if ($key % $modulocarrousel === 0)
+                        @if ($key > 0)
+            </div>
+        </div>
+        @endif
+        <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+            <div class="cards-wrapper">
+                @endif
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $article->titre }}</h5>
+                        <a href="{{ $article->URL }}" class="btn btn-presse shadow">Consulter</a>
+                    </div>
+                    <a href="{{ $article->URL }}">
+                        <img src="/image/{{ $article->chemin }}" alt="{{ $article->chemin }}" class="img-presse"></a>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev presse" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon presse" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next presse" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon presse" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    </div>
+    </div>
+    </div>
+    </div>
     <div id="presentation-article">
-        <div class="parent">
-            <div class="grostitre avis">Vos Avis</div>
-            <br>
-            <br>
-            <h1 class="petittitre">Parce que votre avis compte !</h1>
-        </div>
+        <div class="grostitre avis">Vos Avis</div>
+        <br>
+        <br>
+        <h1 class="petittitre">Parce que votre avis compte !</h1>
+        <hr class="separator">
     </div>
-    <hr class="separator">
+
     <div class='widget-avis'>
         <script src="https://apps.elfsight.com/p/platform.js" defer></script>
         <div class="elfsight-app-c9f4621f-a47d-4f8a-a562-3d93bd1bb1ec"></div>
