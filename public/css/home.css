@@ -188,6 +188,7 @@ a {
 
     height: 20vh;
     width: -webkit-fill-available;
+    width: -moz-available
 }
 
 .cards-wrapper {
@@ -226,4 +227,8 @@ a {
 
 .carousel.presse{
     width: 80%;
+}
+
+.alert{
+    margin-bottom: 0;
 }

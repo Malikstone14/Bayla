@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use App\Models\CarteVin;
 use App\Models\CarteMidi;
 use App\Models\CarteApero;
@@ -8,12 +9,18 @@ use App\Models\CarrouselPresse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeControler;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ConnexionControler;
 use App\Http\Controllers\CarrouselController;
 use App\Http\Controllers\CarteMidiController;
 use App\Http\Controllers\HomeTexteController;
 use App\Http\Controllers\CarteAperoController;
 use App\Http\Controllers\CarrouselPresseController;
+use App\Http\Controllers\CarteAlcoolController;
+use App\Http\Controllers\CarteBoissonController;
+use App\Http\Controllers\MailController;
+use App\Models\CarteAlcool;
+use App\Models\CarteBoisson;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,7 +55,24 @@ Route::get('carte', function () {
 
     $carteapero = CarteApero::orderBy('ordre', 'asc')->where('active', 1)->get();
 
-    return view('carte', compact('cartemidi','cartemidientree', 'cartemidiplat', 'cartemididessert', 'cartevin', 'cartevinrouge', 'cartevinblanc', 'cartevinrose', 'cartevinchampagne', 'carteapero'));
+    //APPELLE TOUTES LES REQUETES NECESSAIRE A L'AFFICHAGE DE LA CARTE COCKTAIL
+
+    $cartealcool = CarteAlcool::all();
+    $cartesignature = CarteAlcool::where('section', 'signature')->where('active', 1)->orderby('ordre', 'asc')->get();
+    $cartebierepress = CarteAlcool::where('section', 'biere')->where('biere', 'pression')->where('active', 1)->orderby('ordre', 'asc')->get();
+    $cartebierebout = CarteAlcool::where('section', 'biere')->where('biere', 'bouteille')->where('active', 1)->orderby('ordre', 'asc')->get();
+    $cartespiritueux = CarteAlcool::where('section', 'spiritueux')->where('active', 1)->orderby('ordre', 'asc')->get();
+    $cartegin = CarteAlcool::where('section', 'gin')->where('active', 1)->orderby('ordre', 'asc')->get();
+    $cartechampagne = CarteAlcool::where('section', 'champagne')->where('active', 1)->orderby('ordre', 'asc')->get();
+
+    //APPELLE TOUTES LES REQUETES NECESSAIRE A L'AFFICHAGE DE LA CARTE BOISSON
+
+    $carteboisson = CarteBoisson::all();
+    $carteboissonfraiche = CarteBoisson::where('section', 'fraiche')->where('active', 1)->orderby('ordre', 'asc')->get();
+    $carteboissonchaude = CarteBoisson::where('section', 'chaude')->where('active', 1)->orderby('ordre', 'asc')->get();
+
+
+    return view('carte', compact('carteboissonchaude','carteboissonfraiche','carteboisson','cartechampagne','cartegin','cartespiritueux','cartebierebout','cartebierepress','cartesignature','cartealcool','cartemidi','cartemidientree', 'cartemidiplat', 'cartemididessert', 'cartevin', 'cartevinrouge', 'cartevinblanc', 'cartevinrose', 'cartevinchampagne', 'carteapero'));
 });
 Route::get('contact', function () {
     return view('contact');
@@ -63,11 +87,20 @@ Route::get('reservation', function () {
     return view('reservation');
 });
 
+Route::post('/email.markdowncontact', [MailController::class, 'Sendcontact']);
+Route::post('/email.markdownreservation', [MailController::class, 'Sendreservation']);
+route::post('email.markdownconfirmation', [MailController::class, 'Sendconfirmation']);
+Route::get('/email.getconfirmation', [MailController::class, 'Getconfirmation']);
+
+Route::get('getconfirmation', [MailController::class, 'Getconfirmation']);
+
 Route::resource('carrousel', CarrouselController::class);
 Route::resource('hometexte', HomeTexteController::class);
 Route::resource('carrouselpresse', CarrouselPresseController::class);
 Route::resource('cartemidi', CarteMidiController::class);
 Route::resource('carteapero', CarteAperoController::class);
-
+Route::resource('user', UserController::class);
+Route::resource('cartealcool', CarteAlcoolController::class);
+Route::resource('carteboisson', CarteBoissonController::class);
 
 require __DIR__ . '/auth.php';

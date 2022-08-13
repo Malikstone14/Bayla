@@ -39,7 +39,7 @@
 
                 {{ Auth::user()->email }}
                 <br>
-                <a href="{{ route('register') }}">Creer un compte</a>
+                <a href="{{ asset('user') }}">Gerer les Utilisateurs</a>
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <br>

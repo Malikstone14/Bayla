@@ -13,13 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('carte_aperos', function (Blueprint $table) {
+        Schema::create('carte_alcools', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
             $table->string('ingredient');
-            $table->integer('prix');
-            $table->boolean('active')->default(1);
+            $table->integer('cl');
             $table->integer('ordre');
+            $table->integer('prix');
+            $table->integer('prix2');
+            $table->boolean('active');
+            $table->enum('biere', ['pression', 'bouteille']);
+            $table->enum('section', ['signature','biere','champagne','spiritueux','gin']);
             $table->timestamps();
         });
     }
@@ -31,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('carte_aperos');
+        Schema::dropIfExists('carte_alcools');
     }
 };

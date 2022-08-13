@@ -419,6 +419,102 @@ body {
 .prix{
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: medium;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  column-gap: 5vh;
+}
+
+#cartebiere{
+  display: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#cartespiritueux{
+  display: none;
+}
+
+#cartegin{
+  display: none;
+}
+
+#cartechampagne{
+  display: none;
+}
+
+#typebiere{
+  display: none;
+}
+
+#carteboissonfraiche{
+  display: none;
+}
+
+#carteboissonchaude{
+  display: none;
+}
+
+.pression{
+  width: 45%;
+  margin-right: 4%;
+}
+
+.bouteille{
+  width: 45%;
+
+}
+
+#cartebiere .prix{
+/* V2 */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    margin-right: 1%;
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 8vh;
+}
+
+.titrebouteille{
+  margin-left: 10%;
+}
+
+.prix.biere{
+  margin-right: 7%;
+}
+
+.separation{
+  background: #fff;
+  width: 1px;
+  height: 500px;
+}
+
+.bouteille .lignecarte{
+  margin-left: 10%;
+}
+
+#cartebiere .quantite{
+/* V1 */
+
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  font-size: x-large;
+  column-gap: 2vh;
+  margin-left: 90%; */
+
+/* V2 */
+display: flex;
+font-size: x-large;
+column-gap: 2vh;
+/* margin-left: 38%; */
+justify-content: flex-end;
+}
+
+#cartebiere .intitule{
+/* V2 */
+  width: 80%;
+  margin-right: 10%;
 }
 
 .btn-edit-carte{
@@ -429,6 +525,44 @@ body {
 
 .separator-carte{
   background-color: #fff;
+}
+
+.noselect {
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	border: none;
+	color: rgba(255,255,255,0.5);
+	font-size: 20px;
+	border-radius: 4px;
+	box-shadow: inset 0px 3px 5px rgba(255,255,255,0.5), 0px 0px 10px rgba(0,0,0,0.15);
+	background: rgb(2,0,36);
+background: linear-gradient(45deg, rgba(2,0,36,0) 5%, rgba(255,255,255,.5) 6%, rgba(255,255,255,0) 9%, rgba(255,255,255,.5) 10%, rgba(255,255,255,0) 17%, rgba(255,255,255,.5) 19%, rgba(255,255,255,0) 21%);
+	background-size: 150%;
+	background-position: right;
+	transition: 1s;
+}
+
+button:hover {
+	background-position: left;
+	color: white;
+	box-shadow: inset 0px 3px 5px rgba(255,255,255,1), 0px 0px 10px rgba(0,0,0,0.25);
+}
+
+button:focus {
+  outline: none;
+  background-position: left;
+	color: white;
+	box-shadow: inset 0px 3px 5px rgba(255,255,255,1), 0px 0px 10px rgba(0,0,0,0.25);
+}
+
+.choixcarte{
+  margin-bottom: 7%;
+  margin-top: 2%;
+}
+
+#cartesignature{
+  display: none;
 }
 
 @media screen and (max-width: 1120px) {

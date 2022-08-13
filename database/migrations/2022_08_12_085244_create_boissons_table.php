@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('carte_boissons', function (Blueprint $table) {
+            $table->id();
             $table->string('nom');
-            $table->string('prénom');
-            $table->integer('numero');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->boolean('profile')->default(0);
+            $table->string('ingredient');
+            $table->integer('prix');
+            $table->integer('ordre');
+            $table->boolean('active');
+            $table->enum('section', ['fraiche','chaude']);
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        // Schema::dropIfExists('users');
+        Schema::dropIfExists('carte_boissons');
     }
 };
