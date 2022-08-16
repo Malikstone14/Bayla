@@ -83,7 +83,6 @@ class CarrouselController extends Controller
             'titre' => 'required',
             'texte' => 'required',
             'ordre' => 'required',
-            'URL' => 'required',
         ]);
         $carrousel->update($request->all());
         return redirect()->route('carrousel.index')
