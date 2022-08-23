@@ -91,7 +91,6 @@ Route::post('/email.markdowncontact', [MailController::class, 'Sendcontact']);
 Route::post('/email.markdownreservation', [MailController::class, 'Sendreservation']);
 route::post('email.markdownconfirmation', [MailController::class, 'Sendconfirmation']);
 Route::get('/email.getconfirmation', [MailController::class, 'Getconfirmation']);
-
 Route::get('getconfirmation', [MailController::class, 'Getconfirmation']);
 
 Route::resource('carrousel', CarrouselController::class);

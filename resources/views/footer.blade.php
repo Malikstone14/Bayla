@@ -11,14 +11,13 @@
                 02.31.91.20.83 <br>
                 <a href="reservation">Réservation</a>
             </p>
-
         </div>
 
         {{-- LOGO CENTRAL DU LAYOUT AVEC LOGO FB ET INSTA --}}
 
         <div class="block-foot col-4">
 
-            <img src="/image/logoB.png" alt="logoB" style="padding-bottom: 3%"><br>
+            <img src="/image/logo2.png" alt="logoB" style="padding-bottom: 3%" width="300" height="100"><br>
             <a href="https://www.facebook.com/baylarestaurant">
                 <box-icon name='facebook-circle' color='white' type='logo' animation='tada-hover'></box-icon>
             </a>

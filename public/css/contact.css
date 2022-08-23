@@ -65,12 +65,25 @@ input[type=submit]:hover {
     display: none;
 }
 
+.ouverture{    
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+
+.coordonnée{
+    margin-top: 5%;
+    margin-left: 10%;
+}
+.coordonnée p{
+    text-align: center;
+}
+
 .map {
     margin-bottom: 5%;
 }
 
 h2 {
-    color: #068b88;
+    color:goldenrod;
     width: 100%;
 }
 
@@ -145,10 +158,10 @@ h2 {
 
 :root {
     --primary-color: #010712;
-    --secondary-color: #396a62;
+    --secondary-color: goldenrod;
     --bg-color: #FCFDFD;
-    --button-color: #396a62;
-    --h1-color: #396a62;
+    --button-color: goldenrod;
+    --h1-color: goldenrod;
 }
 
 [data-theme="dark"] {
@@ -173,7 +186,7 @@ h2 {
 }
 
 .left-col {
-    width: 45vw;
+    width: 50%;
     height: 100%;
     background-image: url("/image/img3.jpg");
     background-size: cover;
@@ -198,7 +211,8 @@ button,
 
 h1 {
     color: var(--h1-color);
-    text-transform: uppercase;
+    font-family: 'Dancing Script', cursive;
+    /* text-transform: uppercase; */
     font-size: 2.5rem;
     letter-spacing: 0.5rem;
     font-weight: 300;

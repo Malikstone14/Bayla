@@ -10,6 +10,10 @@
 
 }
 
+.titrecarrousel{
+    font-size:xx-large;
+}
+
 .separator {
     margin-top: 5%;
     margin-bottom: 5%;
@@ -61,7 +65,7 @@
     transform: translateY(0%);
     opacity: 0;
     transition: all .4s ease;
-    background: linear-gradient(15deg, black 10%, transparent 60%);
+    background: linear-gradient(15deg,#396a62, transparent 70%);
     color: white;
     overflow: hidden;
 }
@@ -93,27 +97,34 @@ a {
 }
 
 .grostitre {
+    color: goldenrod;
+    font-family: 'Dancing Script', cursive;
     position: absolute;
     font-size: 700%;
-    opacity: 0.1;
+    opacity: 0.2;
     letter-spacing: 4rem;
     text-transform: uppercase;
-    color: teal;
+    /* color: teal; */
     width: 75%;
 }
 
 .petittitre {
+    font-family: 'Dancing Script', cursive;
     z-index: 1;
     margin: 30px;
 }
 
+
+
 .grostitre.presse {
+    color: goldenrod;
+    font-family: 'Dancing Script', cursive;
     position: absolute;
     font-size: 700%;
-    opacity: 0.1;
+    opacity: 0.2;
     letter-spacing: 5rem;
     text-transform: uppercase;
-    color: teal;
+    /* color: teal; */
     width: 75%;
 }
 
@@ -125,17 +136,23 @@ a {
     text-align: center;
 }
 
+p.policeDancing{
+    font-family: 'Great Vibes', cursive;
+    font-size: xx-large;
+}
+
 .widget-avis {
     padding-top: 5%;
 }
 
 .grostitre.avis {
+    color: goldenrod;
     position: absolute;
     font-size: 700%;
-    opacity: 0.1;
+    opacity: 0.2;
     letter-spacing: 5rem;
     text-transform: uppercase;
-    color: teal;
+    /* color: teal; */
     width: 75%;
 }
 
@@ -149,7 +166,7 @@ a {
 } */
 
 #presentationarticle {
-
+    
     display: grid;
     place-items: center;
 }
@@ -206,8 +223,8 @@ a {
 }
 
 .btn-presse{
-    background-color: teal !important;
-    border-color: teal !important;
+    background: linear-gradient( #396a62,#87b09e,#396a62) !important;
+    border-color: #396a62 !important;
     color: white;
 }
 
