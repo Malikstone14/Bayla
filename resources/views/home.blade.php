@@ -14,12 +14,13 @@
         <div class="carousel-inner">
 
             @foreach ($carrouselActive as $key => $ongletCarrousel)
+            
                 <div class="carousel-item {{ $key == 0 ? 'active' : '' }}" data-interval="4000">
                     <img src="/image/{{ $ongletCarrousel->chemin }}" alt="{{ $ongletCarrousel->chemin }}"
                         class="d-block w-100">
                     <div class="text-container carousel-caption">
                         <a href="{{ $ongletCarrousel->URL }}">
-                            <h4>{{ $ongletCarrousel->titre }}</h4>
+                            <h4 class="policeDancing titrecarrousel">{{ $ongletCarrousel->titre }}</h4>
                             <p>{{ $ongletCarrousel->texte }}</p>
                         </a>
                     </div>
@@ -84,7 +85,7 @@
         <br>
         <h1 class="petittitre">{{ $homeTexte[0]->home_titre }}</h1>
 
-        <p>{{ $homeTexte[0]->home_texte }}
+        <p class="police">{{ $homeTexte[0]->home_texte }}
         </p>
         <hr class="separator">
     </div>
