@@ -196,7 +196,7 @@ h1 {
 }
 
 p {
-    color: var(--secondary-color);
+    color: white;
     font-size: 0.9rem;
     letter-spacing: 0.01rem;
     width: 40vw;
@@ -220,7 +220,7 @@ form {
 input,
 textarea,
 label {
-    width: 40vw;
+    width: 100%;
     display: block;
 }
 
@@ -354,6 +354,10 @@ input:checked+.slider:before {
 }
 
 @media only screen and (max-width: 950px) {
+    .left-col {
+        display: none;
+    }
+
     .logo {
         width: 8rem;
     }
@@ -378,7 +382,7 @@ input:checked+.slider:before {
     }
 
     button {
-        width: 7rem;
+        width: 4rem;
     }
 
     .theme-switch-wrapper {
@@ -417,5 +421,31 @@ input:checked+.slider:before {
         border-radius: 50%;
     }
 
+    .right-col {
+        background: var(--bg-color);
+        width: 100%;
+        height: 75%;
+        padding: 5rem 3.5rem;
+    }
+    form {
+        width: 100%;
+        position: relative;
+        margin-top: 2rem;
+        padding: 1rem 0;
+        margin-bottom: 10%;
+    }
+    .contact-form{
+        margin-bottom: 10%;
+    }
+    footer{
+        margin-top: 46% !important;
+    }
+    p{
+        text-align: center;
+        width: 100%;
+        color: #fff;
+    }
+    input, textarea, label {
+        width: 100%;
 }
-
+}

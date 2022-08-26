@@ -12,7 +12,7 @@
 
 <!-- Fonts -->
 <script src="../js/mediascreen.js"></script>
-
+<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -27,8 +27,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-
 
 <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -55,36 +53,57 @@
 
 
 <nav class="navbar sticky-top navbar-expand-lg navbar-light ">
+    
     <div class="container-fluid">
-        <a class="navbar-brand col-2" href="/">
-            <img src="/image/logo2.png" alt="logo" margin-right=20% width="130" height="60">
-        </a>
+        <div class="reseaulogo">
+            <a href="https://www.instagram.com/bayla_restaurant/?hl=fr">
+                        <box-icon name='instagram' color="white" type='logo' animation='tada-hover'>
+                        </box-icon>
+                    </a>
+                    <a href="https://www.facebook.com/baylarestaurant">
+                        <box-icon name='facebook' color='white' type='logo' animation='tada-hover'>
+                        </box-icon>
+                    </a>
+        </div>
+        <div class="logo" >
+    <a href="/">
+                    <img src="/image/logo2.png" alt="logo" margin-right="20%" width="130" height="60">
+                </a>
+    </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse col-10" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
             {{-- LES DIFFERENTES SECTIONS DE LA NAVBAR --}}
 
-            <ul class="navbar-nav col-12 ">
 
-                <li class="nav-item first-item col-2">
-                    <a class="nav-link " href="{{ asset('carte')}}">Notre Carte</a>
+
+            <ul class="navbar-nav ">
+
+                <li class="nav-item first-item">
+                    <a class="nav-link " href="{{ asset('carte')}}">Nos Cartes</a>
                 </li>
-                <li class="nav-item col-2">
+                <li class="nav-item">
                     <a class="nav-link " href="{{ asset('reservation')}}">Réservation</a>
                 </li>
-                <li class="nav-item col-2">
+                <li class="nav-item">
                     <a class="nav-link" href="{{ asset('galerie')}}">Galerie Photo</a>
                 </li>
-                <li class="nav-item col-2">
+                <li class="nav-item logo">
+                    <a  href="/">
+                        <img src="/image/logo2.png" alt="logo" margin-right="20%" width="130" height="60">
+                    </a>
+                </li>
+            
+                <li class="nav-item">
                     <a class="nav-link" href="{{ asset('evenement')}}">Evénements</a>
                 </li>
-                <li class="nav-item col-2">
-                    <a class="nav-link" href="{{ asset('contact')}}">Contactez-Nous</a>
-                <li class="nav-item logo-item col-2">
-
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ asset('contact')}}">Contact</a>
+                <li class="nav-item logo-item">
+                   
                     {{-- LOGO FB ET INSTA DE LA NAVBAR --}}
 
                     <a href="https://www.instagram.com/bayla_restaurant/?hl=fr">
@@ -98,8 +117,9 @@
                 </li>
             </ul>
         </div>
-    </div>
+
 </nav>
+</div>
 
 
 @yield('content')

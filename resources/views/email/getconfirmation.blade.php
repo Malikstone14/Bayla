@@ -63,9 +63,6 @@
                         </select>
                     </div>
                     <div class="row col-12">
-                        <div class="col-xs-6 col-sm-6 col-md-6">
-                          <input readonly type="text" name="service" value="{{$_GET['service']}}">
-                        </div>
                         <input readonly type="text" name="heure" id="midi" value="{{$_GET['heure']}}">
                     </div>
                     <br>
@@ -82,6 +79,7 @@
                     <textarea rows="6" placeholder="Néanmoins, nous pouvons vous proposez ......... " id="proposition" name="proposition" ></textarea>
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center pt-4">
                         <button type="submit" name="valider" id='valider' class="btn btn-success">Valider</button>
+                        <button type="submit" name="proposer" id='proposer' class="btn btn-warning">Proposer</button>
                         <button type="submit" name="refuser" id='refuser' class="btn btn-danger">Refuser</button>
                     </div>
                     

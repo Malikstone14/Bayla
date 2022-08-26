@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\MarkdownRefus;
 use Illuminate\Http\Request;
 use App\Mail\MarkdownContact;
+use App\Mail\MarkdownProposition;
 use App\Mail\MarkdownReservation;
 use App\Mail\MarkdownConfirmation;
 use Illuminate\Support\Facades\Mail;
@@ -35,10 +36,15 @@ class MailController extends Controller
             return redirect('reservation')
             ->with('success', 'Email bien envoyé au client');
         }
-        else{
+        elseif(isset($_POST['refuser'])){
             Mail::to($_POST['email'])->send(new MarkdownRefus);
             return redirect('reservation')
             ->with('success', 'Email bien envoyé au client');
+        }
+        else{
+        Mail::to($_POST['email'])->send(new MarkdownProposition);
+        return redirect('reservation')
+        ->with('success', 'Email bien envoyé au client');
         }
     }
 }

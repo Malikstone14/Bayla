@@ -566,8 +566,64 @@ button:focus {
   display: none;
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1250px) {
   .content-titulo {
     font-size: 1rem;
   }
+  .conteudo-general {
+    position: relative;
+    height: 58vh;
+    margin: 1%;
+    padding: 0%;
+  }
+
+  .content-text p.cartetitre{
+    text-align: center;
+    font-size:small;
+    font-family: 'Courier New', Courier, monospace;
+    
+  }
+
+  .conteudo-general.caixa--content-ativo .content-image {
+    width: calc(100vw - 0px);
+  }
+  .content-text p.carteingredient {
+    font-size:xx-small;
+    margin-bottom: 10%;
+  }
+.cartetitre{
+  margin-bottom: 2%;
+  margin-top: 5%;
+}
+
+.content-text h1{
+  font-size: xx-large;
+  margin-bottom: 12%;
+  text-align: center;
+}
+
+.content-text h3{
+  font-size: large;
+}
+
+.content.caixa-conteudo-ativo .content-botao-fechar {
+  z-index: 5;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0s 1.4s;
+  width: 6.5%;
+}
+
+.content-botao-fechar {
+  top: 0px;
+
+}
+
+.choixcarte{
+  text-align: center;
+}
+
+.bx-lg {
+  font-size: 1.5rem!important;
+}
 }

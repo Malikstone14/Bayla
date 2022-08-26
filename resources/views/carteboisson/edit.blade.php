@@ -50,7 +50,7 @@
                         <div class="col-xs-3 col-sm-3 col-md-3">
                             <div class="form-group">
                                 <strong>Prix</strong>
-                                <input type="number" step=".01" name="prix" value="{{ $carteboisson->prix }}" class="form-control"
+                                <input type="number" step=".01" name="prix" value="{{ $carteboisson->prix }}" step="any" class="form-control"
                                     placeholder="Saisir un Prix">
                             </div>
                         </div>
