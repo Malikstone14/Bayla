@@ -67,7 +67,7 @@
         </div>
         <div class="logo" >
     <a href="/">
-                    <img src="/image/logo2.png" alt="logo" margin-right="20%" width="130" height="60">
+                    <img src="/image/logo2.png"  alt="logo" margin-right="20%" width="130" height="60">
                 </a>
     </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -93,7 +93,7 @@
                 </li>
                 <li class="nav-item logo">
                     <a  href="/">
-                        <img src="/image/logo2.png" alt="logo" margin-right="20%" width="130" height="60">
+                        <img src="/image/logo2.png" alt="logo"  width="130" height="60">
                     </a>
                 </li>
             
@@ -124,4 +124,5 @@
 
 @yield('content')
 <script src="/js/carte.js"></script>
+<script src="/js/edit.js"></script>
 @extends('footer')

@@ -59,10 +59,10 @@
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <strong for="date">Date</strong>
                         <br>
-                            <input readonly type="text" id='date' name='date' class='date' value="{{ $_GET['date']}}" required>
+                            <input readonly type="text" name='date' class='date' value="{{ $_GET['date']}}" required>
                         </select>
                     </div>
-                    <div class="row col-12">
+                    <div class="col-6">
                         <input readonly type="text" name="heure" id="midi" value="{{$_GET['heure']}}">
                     </div>
                     <br>

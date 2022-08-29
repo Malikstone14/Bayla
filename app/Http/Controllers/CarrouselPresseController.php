@@ -42,7 +42,6 @@ class CarrouselPresseController extends Controller
     {
         $request->validate([
             'titre' => 'required',
-            'texte' => 'required',
             'ordre' => 'required',
         ]);
 
@@ -86,7 +85,6 @@ class CarrouselPresseController extends Controller
     {
         $request->validate([
             'titre' => 'required',
-            'texte' => 'required',
             'ordre' => 'required',
             'URL' => 'required',
             'chemin' => 'required'

@@ -23,7 +23,13 @@
                 <tr>
                     <td>{{ $user->nom }}</td>
                     <td>{{ $user->email }}</td>
-                    <td>{{ $user->profile }}</td>
+                    <td>
+                        @if ($user->profil == 0)
+                         Admin
+                        @else
+                         Employé     
+                        @endif
+                        </td>
                     <td>
                         <form action="{{ route('user.destroy', $user->id) }}" method="POST">
                     

@@ -16,7 +16,7 @@
                 <div class="right-col">
                     <h1>Formulaire de contact</h1>
 
-                    <form id="contact-form" action="email.test" method="post">
+                    <form id="contact-form" action="email.markdowncontact" method="post">
                         @csrf
                         <label for="name">Nom & Prénom</label>
                         <input type="text" id="name" name="name" placeholder="Votre nom et prénom" required>

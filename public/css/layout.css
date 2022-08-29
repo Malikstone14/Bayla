@@ -82,6 +82,17 @@ li {
     display: none;
 }
 
+.btn-warning {
+    color: #fff;
+}
+.btn-warning:hover{
+    color: #fff;
+}
+
+.logonav{
+    margin: 0;
+}
+
 @media only screen and (max-width: 950px){
 
 
@@ -98,7 +109,7 @@ li {
     text-align: center;
 }
 
-.logo {
+.logo{
     display: block;
     text-align: center;
     width: 55%;

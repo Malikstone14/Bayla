@@ -26,6 +26,13 @@
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
+            <!-- Role -->
+            <div class="mt-4">
+                <x-label for="profile" :value="__('Role')" />
+                Admin<x-input id="profile" type="radio" name="profile" :value= 0 required />
+                Employé<x-input id="profile" type="radio" name="profile" :value= 1 required />
+            </div>
+
             <!-- Password -->
             <div class="mt-4">
                 <x-label for="password" :value="__('Password')" />
