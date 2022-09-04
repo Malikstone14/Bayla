@@ -10,7 +10,7 @@ class CarteMidiController extends Controller
 {
 
     /**
-     * Display a listing of the resource.
+     * Liste de tous les plats en les rangeants par catégorie, et par ordre mais aussi en prenant en compte leur visibilité.
      *
      * @return \Illuminate\Http\Response
      */
@@ -26,7 +26,7 @@ class CarteMidiController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Retourne la vue qui permet de récuperer les informations qui permet une création dans la BDD.
      *
      * @return \Illuminate\Http\Response
      */
@@ -37,7 +37,7 @@ class CarteMidiController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Execute la requete SQL qui permet une création de ligne dans la BDD.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -57,18 +57,7 @@ class CarteMidiController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Cartemidi  $cartemidi
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Cartemidi $cartemidi)
-    {
-        return view('cartemidi.show', compact('cartemidi'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
+     * Retourne la vue qui permet la modification d'une ligne existante.
      *
      * @param  \App\Models\Cartemidi  $cartemidi
      * @return \Illuminate\Http\Response
@@ -80,7 +69,7 @@ class CarteMidiController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Execute la requete qui permet la modification d'une ligne déja existante dans la BDD.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Cartemidi  $cartemidi
@@ -99,7 +88,7 @@ class CarteMidiController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Requete SQL qui supprime la ligne souhaitée.
      *
      * @param  \App\Models\Cartemidi  $cartemidi
      * @return \Illuminate\Http\Response
