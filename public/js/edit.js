@@ -1,19 +1,43 @@
-var checkbox = document.querySelector("input[name=photo]");
-var editphoto = document.getElementById('editphoto');
-var photohidden = document.getElementById('photohidden');
+$.fn.strech_text = function(){
+    var elmt          = $(this),
+        cont_width    = elmt.width(),
+        txt           = elmt.text(),
+        one_line      = $('<span class="stretch_it">' + txt + '</span>'),
+        nb_char       = elmt.text().length,
+        spacing       = cont_width/nb_char,
+        txt_width;
 
+    elmt.html(one_line);
+    txt_width = one_line.width();
 
-// checkbox.addEventListener('change', function() {
-//     console.log('cc');
-//         if (this.checked){
-//         editphoto.style.visibility = 'hidden';
-//         editphoto.style.display = "none";
-//         photohidden.style.display ="block";
-//         photohidden.style.visibility = 'visible';
-//         }else{
-//         photohidden.style.visibility = 'hidden';
-//         editphoto.style.visibility = 'visible';
-//         editphoto.style.display = "block";
-//         photohidden.style.display = "none";
-//         }
-//      })
+    if (txt_width < cont_width){
+        var  char_width     = txt_width/nb_char,
+             ltr_spacing    = spacing - char_width + (spacing - char_width)/nb_char ; 
+
+        one_line.css({'letter-spacing': ltr_spacing});
+    } else {
+        one_line.contents().unwrap();
+        elmt.addClass('justify');
+    }
+};
+
+$(document).ready(function () {
+    $('.grostitre').strech_text();
+    $(window).resize(function () { 
+        $('.grostitre').strech_text();
+    });
+});
+
+$(document).ready(function () {
+    $('.grostitreavis').strech_text();
+    $(window).resize(function () { 
+        $('.grostitreavis').strech_text();
+    });
+});
+
+$(document).ready(function () {
+    $('.grostitrepresse').strech_text();
+    $(window).resize(function () { 
+        $('.grostitrepresse').strech_text();
+    });
+});

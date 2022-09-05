@@ -27,9 +27,6 @@
                 </div>
             @endforeach
         </div>
-
-    </div>
-
     <!-- Contrôles -->
     <a class="carousel-control-prev" href="#carrousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -39,6 +36,9 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only"></span>
     </a>
+    </div>
+
+
 
     <div id="presentation">
         @auth
@@ -98,7 +98,7 @@
     @endauth
     <div id="presentation-article">
 
-        <div class="grostitre presse">Presse</div>
+        <div class="grostitrepresse">Presse</div>
         <br>
         <br>
         <h1 class="petittitre">On parle de nous !</h1>
@@ -144,7 +144,7 @@
     </div>
     </div>
     <div id="presentation-article">
-        <div class="grostitre avis">Vos Avis</div>
+        <div class="grostitreavis">Vos Avis</div>
         <br>
         <br>
         <h1 class="petittitre">Parce que votre avis compte !</h1>

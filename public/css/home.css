@@ -59,8 +59,7 @@
 
 
 .text-container {
-    width: 100%;
-    padding-bottom: 4rem;
+    height: fit-content;
     visibility: hidden;
     transform: translateY(0%);
     opacity: 0;
@@ -102,10 +101,11 @@ a {
     position: absolute;
     font-size: 700%;
     opacity: 0.2;
-    letter-spacing: 4rem;
     text-transform: uppercase;
+    overflow-x:hidden;
     /* color: teal; */
     width: 75%;
+    display: block;
 }
 
 .petittitre {
@@ -114,18 +114,24 @@ a {
     margin: 30px;
 }
 
+.stretch_it{
+    white-space: nowrap;
+}
 
+#presentation{
+    height: 10%;
+}
 
-.grostitre.presse {
+.grostitrepresse {
     color: goldenrod;
     font-family: 'Dancing Script', cursive;
     position: absolute;
     font-size: 700%;
     opacity: 0.2;
-    letter-spacing: 5rem;
     text-transform: uppercase;
     /* color: teal; */
     width: 75%;
+    display: block;
 }
 
 
@@ -145,15 +151,16 @@ p.policeDancing{
     padding-top: 5%;
 }
 
-.grostitre.avis {
+.grostitreavis {
+    font-family: 'Dancing Script', cursive;
     color: goldenrod;
     position: absolute;
     font-size: 700%;
     opacity: 0.2;
-    letter-spacing: 5rem;
     text-transform: uppercase;
     /* color: teal; */
     width: 75%;
+    display: block;
 }
 
 
@@ -248,4 +255,59 @@ p.policeDancing{
 
 .alert{
     margin-bottom: 0;
+}
+
+@media only screen and (max-width: 950px){
+
+.grostitre{
+    display: none;
+}
+
+.grostitrepresse{
+    display: none;
+}
+
+.grostitreavis{
+    display: none;
+}
+
+.card {
+    width: 85%;
+    height: 100%;
+    object-fit: cover;
+
+    -webkit-box-reflect:unset ;
+
+    transform-origin: center;
+    transform: perspective(0px) rotateY(0deg);
+    transition: 0.5s;
+}
+
+.titrecarrousel {
+    font-size: 140%;
+}
+
+.text-container p{
+    font-size: 66%;
+    margin-bottom: 0%;
+}
+
+#presentation {
+    margin-top: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+}
+
+.carousel.presse {
+    width: 100%;
+}
+
+#presentation-article {
+    margin-top: -20%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+}
+
 }

@@ -379,6 +379,10 @@ input:checked+.slider:before {
 }
 
 @media only screen and (max-width: 950px) {
+    .left-col {
+        display: none;
+    }
+
     .logo {
         width: 8rem;
     }
@@ -386,10 +390,24 @@ input:checked+.slider:before {
     h1 {
         font-size: 1.75rem;
     }
-
-    p {
-        font-size: 0.7rem;
+    .coordonnée {
+        margin-top: 5%;
+        margin-left: auto;
     }
+.coordonnée p {
+        /* font-size: 0.7rem; */
+        text-align: center;
+        font-size: inherit;
+        color: var(--secondary-color);
+        letter-spacing: 0.01rem;
+        width: 100%;
+        margin: none;
+        font-size: 75%;
+    }
+
+    .navbar-toggler{
+        width: 16.5%;
+      }
 
     input,
     textarea,
@@ -402,9 +420,7 @@ input:checked+.slider:before {
         margin-left: 0.4rem;
     }
 
-    button {
-        width: 7rem;
-    }
+
 
     .theme-switch-wrapper {
         width: 120px;
@@ -442,4 +458,36 @@ input:checked+.slider:before {
         border-radius: 50%;
     }
 
+    .right-col {
+        background: var(--bg-color);
+        width: 100%;
+        height: 75%;
+        padding: 1rem 1.5rem;
+    }
+    form {
+        width: 100%;
+        position: relative;
+        margin-top: 2rem;
+        padding: 1rem 0;
+        margin-bottom: 1%;
+    }
+    .contact-form{
+        margin-bottom: 1%;
+    }
+
+    p{
+        text-align: center;
+        width: 100%;
+        color: #fff;
+    }
+    input, textarea, label {
+        width: 100%;
+}
+
+.contact-container {
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    background: var(--bg-color);
+}
 }

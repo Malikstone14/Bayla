@@ -367,8 +367,13 @@ input:checked+.slider:before {
     }
 
     p {
-        font-size: 0.7rem;
+        /* font-size: 0.7rem; */
+        font-size: inherit;
     }
+
+    .navbar-toggler{
+        width: 16.5%;
+      }
 
     input,
     textarea,
@@ -381,9 +386,7 @@ input:checked+.slider:before {
         margin-left: 0.4rem;
     }
 
-    button {
-        width: 4rem;
-    }
+
 
     .theme-switch-wrapper {
         width: 120px;
