@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label">Texte</label>
-                                    <textarea class="form-control" name="home_texte" value="{{ $homeTexte[0]->home_texte }}" id="message-text">{{ $homeTexte[0]->home_texte }}</textarea>
+                                    <textarea class="form-control" name="home_texte" maxlength="500" value="{{ $homeTexte[0]->home_texte }}" id="message-text">{{ $homeTexte[0]->home_texte }}</textarea>
                                 </div>
                             </div>
                             <div class="modal-footer">
