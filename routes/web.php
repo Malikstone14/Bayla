@@ -87,23 +87,22 @@ Route::get('reservation', function () {
     return view('reservation');
 });
 
-Route::get('layout', function () {
-    return view('layout');
-});
+Route::get('getconfirmation', function () {
+    return view('email.getconfirmation');
+})->middleware('auth');
 
 Route::post('/email.markdowncontact', [MailController::class, 'Sendcontact']);
 Route::post('/email.markdownreservation', [MailController::class, 'Sendreservation']);
 route::post('/email.markdownconfirmation', [MailController::class, 'Sendconfirmation']);
 Route::get('/email.getconfirmation', [MailController::class, 'Getconfirmation']);
-Route::get('getconfirmation', [MailController::class, 'Getconfirmation']);
 
-Route::resource('carrousel', CarrouselController::class);
-Route::resource('hometexte', HomeTexteController::class);
-Route::resource('carrouselpresse', CarrouselPresseController::class);
-Route::resource('cartemidi', CarteMidiController::class);
-Route::resource('carteapero', CarteAperoController::class);
-Route::resource('user', UserController::class);
-Route::resource('cartealcool', CarteAlcoolController::class);
-Route::resource('carteboisson', CarteBoissonController::class);
+Route::resource('carrousel', CarrouselController::class)->middleware('auth');
+Route::resource('hometexte', HomeTexteController::class)->middleware('auth');
+Route::resource('carrouselpresse', CarrouselPresseController::class)->middleware('auth');
+Route::resource('cartemidi', CarteMidiController::class)->middleware('auth');
+Route::resource('carteapero', CarteAperoController::class)->middleware('auth');
+Route::resource('user', UserController::class)->middleware('auth');
+Route::resource('cartealcool', CarteAlcoolController::class)->middleware('auth');
+Route::resource('carteboisson', CarteBoissonController::class)->middleware('auth');
 
 require __DIR__ . '/auth.php';
