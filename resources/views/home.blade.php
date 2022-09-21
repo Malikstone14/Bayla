@@ -41,6 +41,7 @@
 
 
     <div id="presentation">
+        <h1>Helllooooo</h1>
         @auth
             <box-icon class='btn-edit' data-toggle="modal" data-target="#exampleModal" name='edit' class='edit-carrousel'
                 color='black' type='solid' animation='tada'></box-icon>
