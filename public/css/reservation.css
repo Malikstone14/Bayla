@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     padding: 0px;
 }
 
@@ -99,7 +99,7 @@ h2 {
 
 .onglet button {
     text-align: center;
-    font-family: Roboto, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: 0;
     font-size: 14px;
     color: #fff;
@@ -181,7 +181,7 @@ h1,
 label,
 button,
 .description {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: 400;
     letter-spacing: 0.1rem;
 }
@@ -189,7 +189,7 @@ button,
 h1 {
     color: var(--h1-color);
     /* text-transform: uppercase; */
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 2.5rem;
     letter-spacing: 0.5rem;
     font-weight: 300;
@@ -228,7 +228,7 @@ p,
 placeholder,
 input,
 textarea {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 input::placeholder,
@@ -344,7 +344,7 @@ input:checked+.slider:before {
     margin: 0.125rem 0;
     font-size: 0.75rem;
     text-transform: uppercase;
-    font-family: 'Jost';
+    font-family: 'Courier New', Courier, monospace;
     color: var(--secondary-color);
 }
 

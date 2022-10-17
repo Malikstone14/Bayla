@@ -1,6 +1,3 @@
-body{
-    max-width: 100vw;
-}
 
 html{
     overflow-x: hidden;
@@ -8,7 +5,7 @@ html{
 }
 
 .policeDancing{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Dancing Script', cursive;
 }
 
 footer {
@@ -16,7 +13,7 @@ footer {
     width: 100%;
     height: 25%;
     /* background-color: rgb(27, 26, 26); */
-    background: linear-gradient( #c8d7e0,#1b4977);
+    background: linear-gradient( #87b09e,#396a62);
 }
 
 .block-foot {
@@ -53,7 +50,7 @@ li {
 }
 
 .navbar {
-    background: linear-gradient( #c8d7e0,#1b4977);
+    background: linear-gradient( #396a62,#87b09e);
     width: 100%;
     /* background-color: rgb(27, 26, 26); */
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
@@ -75,7 +72,7 @@ li {
 .nav-link {
     
     color: white !important;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Dancing Script', cursive;
     font-size: x-large;
 }
 .reseaulogo{

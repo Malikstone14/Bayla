@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Carrousel;
+use Dotenv\Store\File\Paths;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -43,6 +44,8 @@ class CarrouselController extends Controller
         ]);
 
         Carrousel::create($request->all());
+
+        
 
         return redirect()->route('carrousel.index')
             ->with('success', 'Onglet de carrousel créé avec succès.');
