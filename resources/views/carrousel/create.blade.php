@@ -17,7 +17,7 @@
             </div>
         @endif
 
-        <form action="{{ route('carrousel.store') }}" method="POST">
+        <form action="{{ route('carrousel.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="container-edit">
@@ -69,7 +69,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Inserer une nouvelle image (Conseil : 1900x888p)</strong>
-                            <input type="file" name="chemin" value="" class="form-control">
+                            <input type="file" name="image" id="image" value="" class="form-control">
                         </div>
                     </div>
                 </div>

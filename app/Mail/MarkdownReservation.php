@@ -28,6 +28,7 @@ class MarkdownReservation extends Mailable
      */
     public function build()
     {
-        return $this->markdown('email.markdownreservation');
+        return $this->markdown('email.markdownreservation')->subject("Mise à jour de votre demande de réservation");
+
     }
 }

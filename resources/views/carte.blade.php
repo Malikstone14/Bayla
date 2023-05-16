@@ -212,9 +212,15 @@
                            </a>
                          @endauth
                          </div>
-                          <h1>Carte des Tapas</h1>
+                          <h1>Carte à Déguster</h1>
+                          <div class='choixcarte'>
+                             <button class='noselect' id="tapas">Tapas</button>
+                             <button class='noselect' id="plat">Plat</button>
+                             <button class='noselect' id="dessert">Dessert</button>
+                          </div>
                           <br>
-                          @foreach ($carteapero as $tapas)
+                          <div id="cartetapas">
+                          @foreach ($carteaperotapas as $tapas)
                           <div class='lignecarte'>
                             <div class="intitule">
                               <p class="cartetitre">{{$tapas->nom}}</p>
@@ -225,6 +231,35 @@
                             </div>
                           </div>
                           @endforeach
+                          </div>
+                          <div id="carteplat">
+                            @foreach ($carteaperoplat as $plat)
+                            <div class='lignecarte'>
+                              <div class="intitule">
+                           
+                            <p class='cartetitre'>{{$plat->nom}}</p>
+                            <p class='carteingredient'>{{$plat->ingredient}}</p>
+                          </div>
+                          <div>
+                            <p class="prix">{{$tapas->prix}}€</p>
+                          </div>
+                        </div>
+                            @endforeach
+                          </div>
+                         <div id="cartedessert">
+                          @foreach ($carteaperodessert as $dessert)
+                          <div class='lignecarte'>
+                            <div class="intitule">
+                          
+                          <p class='cartetitre'>{{$dessert->nom}}</p>
+                          <p class='carteingredient'>{{$dessert->ingredient}}</p>
+                        </div>
+                        <div>
+                          <p class="prix">{{$tapas->prix}}€</p>
+                        </div>
+                      </div>
+                          @endforeach
+                        </div>
                         </div>
                         <div class="content-botao-fechar"></div>
                       </div>

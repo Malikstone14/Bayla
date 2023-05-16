@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('texte');
             $table->integer('ordre');
             $table->string('chemin');
+            $table->string('image')->default("logo.png");
             $table->boolean('active')->default(1);
             $table->string('URL');
             $table->timestamps();

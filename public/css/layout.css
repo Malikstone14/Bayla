@@ -2,13 +2,22 @@
     text-decoration: none !important;
 }
 
+.resafooter{
+    text-decoration: underline !important;
+
+}
+
+.resafooter:hover{
+    color: goldenrod;
+}
+
 html{
     overflow-x: hidden;
     font-family: 'Courier New', Courier, monospace;
 }
 
 .policeDancing{
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Arial';
 }
 
 footer {
@@ -75,8 +84,8 @@ li {
 .nav-link {
     
     color: white !important;
-    font-family: 'Dancing Script', cursive;
-    font-size: x-large;
+    font-family: 'Arial';
+    font-size: large;
 }
 .reseaulogo{
     display: none;

@@ -16,7 +16,7 @@
         @endif
 
 
-        <form action="{{ route('carrousel.update', $carrousel->id) }}" method="POST">
+        <form action="{{ route('carrousel.update', $carrousel->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="container-edit">
@@ -24,8 +24,8 @@
                     <div class="row">
                         <div align="center" class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <img style="width: 40%" src="/image/{{ $carrousel->chemin }}"
-                                    alt="{{ $carrousel->chemin }}">
+                                <img style="width: 40%" src="/image/{{ $carrousel->image }}"
+                                    alt="{{ $carrousel->image }}">
                                 <br>
                                 <strong>Image Actuelle</strong>
                             </div>
@@ -79,12 +79,12 @@
 
                     
                     <div style="margin-top:1%" id="photohidden" class="row col-12">
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                                <strong>Inserer une nouvelle image (Conseil : 1900x888p)</strong>
-                                <input type="text" name="chemin" value="{{ $carrousel->chemin }}" class="form-control">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <strong>Inserer une nouvelle image (Conseil : 1900x888p)</strong>
+                                    <input type="file" name="image" id="image" value="{{$carrousel->image}}" class="form-control">
+                                </div>
                             </div>
-                        </div>
                     </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center pt-4">

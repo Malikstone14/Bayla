@@ -28,6 +28,6 @@ class MarkdownProposition extends Mailable
      */
     public function build()
     {
-        return $this->markdown('email.markdownproposition');
+        return $this->markdown('email.markdownproposition')->subject("Votre demande de réservation");
     }
 }

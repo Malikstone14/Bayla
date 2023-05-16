@@ -28,7 +28,7 @@
                     <td>{{ $ongletCarrousel->titre }}</td>
                     <td>{{ $ongletCarrousel->texte }}</td>
                     <td>{{ $ongletCarrousel->ordre }}</td>
-                    <td><img class='img-index' src="/image/{{ $ongletCarrousel->chemin }}" alt="{{ $ongletCarrousel->chemin }}"></td>
+                    <td><img class='img-index' src="{{'storage/image/'.$ongletCarrousel->image}}" alt="{{ $ongletCarrousel->image }}"></td>
                     <td>{{ $ongletCarrousel->URL }}</td>
                     <td>
                         @if ($ongletCarrousel->active)

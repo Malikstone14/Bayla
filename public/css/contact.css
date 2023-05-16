@@ -211,7 +211,7 @@ button,
 
 h1 {
     color: var(--h1-color);
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Roboto';
     /* text-transform: uppercase; */
     font-size: 2.5rem;
     letter-spacing: 0.5rem;

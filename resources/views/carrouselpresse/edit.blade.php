@@ -16,7 +16,7 @@
         @endif
 
 
-        <form action="{{ route('carrouselpresse.update', $carrouselpresse->id) }}" method="POST">
+        <form action="{{ route('carrouselpresse.update', $carrouselpresse->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="container-edit">
@@ -24,8 +24,8 @@
                     <div class="row">
                         <div align="center" class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <img style="width: 40%" src="/image/{{ $carrouselpresse->chemin }}"
-                                    alt="{{ $carrouselpresse->chemin }}">
+                                <img style="width: 40%" src="/image/{{ $carrouselpresse->image }}"
+                                    alt="{{ $carrouselpresse->image }}">
                                 <br>
                                 <strong>Image Actuelle</strong>
                             </div>
@@ -76,15 +76,14 @@
                             </select>
                         </div>
                     </div>
-                    <div style="margin-top:1%" class="row col-12">
+                    <div style="margin-top:1%" id="photohidden" class="row col-12">
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <strong>Inserer une nouvelle image </strong>
-                                <input type="text" name="chemin" value="{{ $carrouselpresse->chemin }}"
-                                    class="form-control">
+                                <strong>Inserer une nouvelle image (Conseil : 1900x888p)</strong>
+                                <input type="file" name="image" id="image" value="{{$carrouselpresse->image}}" class="form-control">
                             </div>
                         </div>
-                    </div>
+                </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center pt-4">
                         <button type="submit" class="btn btn-primary">Soumettre</button>

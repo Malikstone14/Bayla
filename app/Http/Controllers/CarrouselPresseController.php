@@ -2,8 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CarrouselPresse;
 use Illuminate\Http\Request;
+use App\Models\CarrouselPresse;
+use Nette\Utils\Image;
+use App\Models\Carrousel;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
 
 class CarrouselPresseController extends Controller
 {
@@ -44,13 +50,22 @@ class CarrouselPresseController extends Controller
             'titre' => 'required',
             'ordre' => 'required',
         ]);
+        
+        $image= $request->file('image')->storeAs('public/image',$request->file('image')->getClientOriginalName());
+        $filename= $request->file('image')->getClientOriginalName();
+        $query= DB::table('Carrousel_presses')->insert([
+            'image'=>$filename,
+            'titre'=>$request->input("titre"),
+            'ordre'=>$request->input("ordre")
 
-        CarrouselPresse::create($request->all());
+        ]);
+
+
 
         return redirect()->route('carrouselpresse.index')
             ->with('success', 'Onglet de carrousel créé avec succès.');
-    }
-
+    
+}
     /**
      * Display the specified resource.
      *
@@ -83,15 +98,30 @@ class CarrouselPresseController extends Controller
      */
     public function update(Request $request, CarrouselPresse $carrouselpresse)
     {
+        $carrousel_id = $carrouselpresse->id;
         $request->validate([
             'titre' => 'required',
             'ordre' => 'required',
             'URL' => 'required',
-            'chemin' => 'required'
+            'image' => 'required'
         ]);
-        $carrouselpresse->update($request->all());
+
+        
+        $image= $request->file('image')->storeAs('public/image',$request->file('image')->getClientOriginalName());
+        $filename= $request->file('image')->getClientOriginalName();
+        $query= DB::table('carrousel_presses')
+            ->where('id', $carrousel_id)
+            ->update([
+            'image'=>$filename,
+            'titre'=>$request->input("titre"),
+            'URL'=>$request->input("URL"),
+            'ordre'=>$request->input("ordre")
+
+        ]);
+        
         return redirect()->route('carrouselpresse.index')
             ->with('success', 'Votre carrousel a été mis à jour avec succès');
+
     }
 
     /**

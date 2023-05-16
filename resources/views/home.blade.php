@@ -16,7 +16,7 @@
             @foreach ($carrouselActive as $key => $ongletCarrousel)
             
                 <div class="carousel-item {{ $key == 0 ? 'active' : '' }}" data-interval="4000">
-                    <img src="/image/{{ $ongletCarrousel->chemin }}" alt="{{ $ongletCarrousel->chemin }}"
+                    <img src="/image/{{ $ongletCarrousel->image }}" alt="{{ $ongletCarrousel->image }}"
                         class="d-block w-100">
                     <div class="text-container carousel-caption">
                         <a href="{{ $ongletCarrousel->URL }}">
@@ -125,7 +125,7 @@
                         <a href="{{ $article->URL }}" class="btn btn-presse shadow">Consulter</a>
                     </div>
                     <a href="{{ $article->URL }}">
-                        <img src="/image/{{ $article->chemin }}" alt="{{ $article->chemin }}" class="img-presse"></a>
+                        <img src="/image/{{ $article->image }}" alt="{{ $article->image }}" class="img-presse"></a>
                 </div>
                 @endforeach
             </div>
@@ -147,7 +147,7 @@
         <div class="grostitreavis">Vos Avis</div>
         <br>
         <br>
-        <h1 class="petittitre">Parce que votre avis compte !</h1>
+        <h1 class="petittitre">Votre avis compte !</h1>
         <hr class="separator">
     </div>
 

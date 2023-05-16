@@ -97,7 +97,7 @@ a {
 
 .grostitre {
     color: goldenrod;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Roboto';
     position: absolute;
     font-size: 700%;
     opacity: 0.2;
@@ -109,7 +109,7 @@ a {
 }
 
 .petittitre {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Roboto';
     z-index: 1;
     margin: 30px;
 }
@@ -124,7 +124,7 @@ a {
 
 .grostitrepresse {
     color: goldenrod;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Roboto';
     position: absolute;
     font-size: 700%;
     opacity: 0.2;
@@ -143,7 +143,7 @@ a {
 }
 
 p.policeDancing{
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Great Vibes';
     font-size: xx-large;
 }
 
@@ -152,7 +152,7 @@ p.policeDancing{
 }
 
 .grostitreavis {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Roboto';
     color: goldenrod;
     position: absolute;
     font-size: 700%;

@@ -15,6 +15,12 @@ var boissonfraiche = document.getElementById("carteboissonfraiche");
 var btnboissonfraiche = document.getElementById("fraiche");
 var boissonchaude = document.getElementById("carteboissonchaude");
 var btnboissonchaude = document.getElementById("chaude");
+var btntapas = document.getElementById("tapas");
+var btnplat = document.getElementById("plat");
+var btndessert = document.getElementById("dessert");
+var cartetapas = document.getElementById("cartetapas");
+var carteplat = document.getElementById("carteplat");
+var cartedessert = document.getElementById("cartedessert");
 var $conteudogeneral = document.querySelector(".conteudo-general");
 var $conteudoEmArray = [].slice.call(document.querySelectorAll(".content"));
 var $botoesDeFechar = [].slice.call(
@@ -100,16 +106,36 @@ btnboissonfraiche.addEventListener("click", AfficherBoissonFraiche);
 btnboissonchaude.addEventListener("click", AfficherBoissonChaude);
 
 function AfficherBoissonFraiche(){
-  console.log("hello");
   boissonfraiche.style.display = "inline";
   boissonchaude.style.display = "none";
 }
 
 function AfficherBoissonChaude(){
-  console.log("cc");
   boissonfraiche.style.display = "none";
   boissonchaude.style.display = "inline";
 }
+
+btntapas.addEventListener("click", AfficherTapas);
+btnplat.addEventListener("click", AfficherPlat);
+btndessert.addEventListener("click", AfficherDessert);
+
+function AfficherTapas(){
+  cartetapas.style.display = "inline";
+  carteplat.style.display = "none";
+  cartedessert.style.display = "none";
+}
+
+function AfficherPlat(){
+  cartetapas.style.display = "none";
+  carteplat.style.display = "inline";
+  cartedessert.style.display = "none";
+}
+function AfficherDessert(){
+  cartetapas.style.display = "none";
+  carteplat.style.display = "none";
+  cartedessert.style.display = "inline";
+}
+
 
 
 

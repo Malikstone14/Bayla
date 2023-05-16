@@ -11,6 +11,6 @@ class CarrouselPresse extends Model
     public $primaryKey = 'id';
     public $incrementing = true;
     protected $fillable = [
-        'id', 'titre', 'texte', 'ordre', 'chemin', 'active', 'URL'
+        'id', 'titre', 'texte', 'ordre', 'chemin', 'active', 'URL','image'
     ];
 }

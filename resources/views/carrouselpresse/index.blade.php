@@ -25,7 +25,7 @@
                 <tr>
                     <td>{{ $article->titre }}</td>
                     <td>{{ $article->ordre }}</td>
-                    <td><img class='img-index' src="/image/{{ $article->chemin }}" alt="{{ $article->chemin }}">
+                    <td><img class='img-index' src="/image/{{ $article->image }}" alt="{{ $article->image }}">
                     </td>
                     <td>{{ $article->URL }}</td>
                     <td>

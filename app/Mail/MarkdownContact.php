@@ -28,6 +28,6 @@ class MarkdownContact extends Mailable
      */
     public function build()
     {
-        return $this->markdown('email.markdowncontact');
+        return $this->markdown('email.markdowncontact')->subject("Un client a envoyé un message");
     }
 }

@@ -11,6 +11,6 @@ class CarteApero extends Model
     public $primaryKey = 'id';
     public $incrementing = true;
     protected $fillable = [
-        'id', 'nom', 'ordre','active', 'prix', 'ingredient'
+        'id', 'nom', 'ordre','active', 'prix', 'ingredient','section'
     ];
 }

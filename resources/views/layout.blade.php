@@ -38,6 +38,8 @@
   <script type="text/javascript"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 </script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 
 
 
@@ -95,7 +97,7 @@
                 </li>
             
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ asset('evenement')}}">Evénements</a>
+                    <a class="nav-link" href="{{ asset('evenement')}}">Nos Evénements</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ asset('contact')}}">Contact</a>

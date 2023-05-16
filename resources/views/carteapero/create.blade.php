@@ -34,7 +34,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Ingrédients ou détails</strong>
-                            <textarea type="text" name="ingrédient" value="" class="form-control" placeholder="Saisir vos ingrédients ou vos détails"></textarea>
+                            <textarea type="text" name="ingredient" value="" class="form-control" placeholder="Saisir vos ingrédients ou vos détails"></textarea>
                         </div>
                     </div>
                 </div>
@@ -52,6 +52,15 @@
                             <input type="number" name="prix" value="" class="form-control"
                                 placeholder="Saisir un prix">
                         </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6" id="section" >
+                        <strong for="section">Section</strong>
+                        <br>
+                        <select name="section">
+                            <option value="tapas">Tapas</option>
+                            <option value="plat">Plat</option>
+                            <option value="dessert">Dessert</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row col-12">

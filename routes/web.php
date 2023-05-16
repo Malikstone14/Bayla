@@ -54,6 +54,9 @@ Route::get('carte', function () {
     //APPELLE TOUTES LES REQUETES NECESSAIRE A L'AFFICHAGE DE LA CARTE DES TAPAS
 
     $carteapero = CarteApero::orderBy('ordre', 'asc')->where('active', 1)->get();
+    $carteaperotapas = CarteApero::where('section', 'tapas' )->where('active', 1)->orderby('ordre', 'asc')->get();
+    $carteaperoplat = CarteApero::where('section', 'plat' )->where('active', 1)->orderby('ordre', 'asc')->get();
+    $carteaperodessert = CarteApero::where('section', 'dessert' )->where('active', 1)->orderby('ordre', 'asc')->get();
 
     //APPELLE TOUTES LES REQUETES NECESSAIRE A L'AFFICHAGE DE LA CARTE COCKTAIL
 
@@ -72,7 +75,7 @@ Route::get('carte', function () {
     $carteboissonchaude = CarteBoisson::where('section', 'chaude')->where('active', 1)->orderby('ordre', 'asc')->get();
 
 
-    return view('carte', compact('carteboissonchaude','carteboissonfraiche','carteboisson','cartechampagne','cartegin','cartespiritueux','cartebierebout','cartebierepress','cartesignature','cartealcool','cartemidi','cartemidientree', 'cartemidiplat', 'cartemididessert', 'cartevin', 'cartevinrouge', 'cartevinblanc', 'cartevinrose', 'cartevinchampagne', 'carteapero'));
+    return view('carte', compact('carteboissonchaude','carteboissonfraiche','carteboisson','cartechampagne','cartegin','cartespiritueux','cartebierebout','cartebierepress','cartesignature','cartealcool','cartemidi','cartemidientree', 'cartemidiplat', 'cartemididessert', 'cartevin', 'cartevinrouge', 'cartevinblanc', 'cartevinrose', 'cartevinchampagne', 'carteapero','carteaperotapas','carteaperoplat','carteaperodessert'));
 });
 Route::get('contact', function () {
     return view('contact');

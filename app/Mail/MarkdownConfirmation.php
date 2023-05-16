@@ -28,6 +28,6 @@ class MarkdownConfirmation extends Mailable
      */
     public function build()
     {
-        return $this->markdown('email.markdownconfirmation');
+        return $this->markdown('email.markdownconfirmation')->subject("Confirmation de votre réservation");
     }
 }

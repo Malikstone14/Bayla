@@ -570,6 +570,18 @@ button:focus {
   display: none;
 }
 
+#cartetapas{
+  display: none;
+}
+
+#carteplat{
+  display: none;
+}
+
+#cartedessert{
+  display: none;
+}
+
 @media screen and (max-width: 1250px) {
   .btn-edit-carte {
     position: absolute;

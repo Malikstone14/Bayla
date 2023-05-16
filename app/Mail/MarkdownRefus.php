@@ -28,6 +28,6 @@ class MarkdownRefus extends Mailable
      */
     public function build()
     {
-        return $this->markdown('email.markdownrefus');
+        return $this->markdown('email.markdownrefus')->subject("Refus de votre demande de réservation");
     }
 }

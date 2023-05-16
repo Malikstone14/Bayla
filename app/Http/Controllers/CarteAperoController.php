@@ -15,8 +15,11 @@ class CarteAperoController extends Controller
     public function index()
     {
         $carteapero = CarteApero::orderBy('ordre', 'asc')->orderBy('active', 'desc')->get();
+        $carteaperotapas = CarteApero::where('section', 'tapas' )->orderby('ordre', 'asc')->orderBy('active', 'desc')->get();
+        $carteaperoplat = CarteApero::where('section', 'plat' )->orderby('ordre', 'asc')->orderBy('active', 'desc')->get();
+        $carteaperodessert = CarteApero::where('section', 'dessert' )->orderby('ordre', 'asc')->orderBy('active', 'desc')->get();
 
-        return view('carteapero.index', compact('carteapero'))
+        return view('carteapero.index', compact('carteapero','carteaperotapas','carteaperoplat','carteaperodessert'))
             ->with('i', (request()->input('page', 1) - 1) * 4);
     }
 
@@ -43,6 +46,7 @@ class CarteAperoController extends Controller
             'nom' => 'required',
             'prix' => 'required',
             'ordre' => 'required',
+            'section' => 'required',
         ]);
 
         CarteApero::create($request->all());
@@ -86,6 +90,7 @@ class CarteAperoController extends Controller
             'nom' => 'required',
             'prix' => 'required',
             'ordre' => 'required',
+            'section' => 'required',
         ]);
         $carteapero->update($request->all());
         return redirect()->route('carteapero.index')

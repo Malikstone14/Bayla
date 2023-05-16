@@ -16,7 +16,7 @@ class MailController extends Controller
 // Envoi de Mail du client vers le Bayla pour une simple prise de contact dans la vue "contact.blade.php"
 
     public function Sendcontact(){
-        Mail::to('Caroline@test.com')->send(new MarkdownContact);
+        Mail::to('Malikstone14@gmail.com')->send(new MarkdownContact);
         return redirect('contact')
             ->with('success', 'Votre message a bien été envoyé, nous reviendrons vers vous dans les meilleurs délais');
     }
@@ -24,7 +24,7 @@ class MailController extends Controller
 // Envoi d'un mail du client vers le Bayla pour une demande de réservation "reservation.blade.php"
 
     public function Sendreservation(){
-        Mail::to('Caroline@test.com')->send(new MarkdownReservation);
+        Mail::to('Malikstone14@gmail.com')->send(new MarkdownReservation);
         return redirect('reservation')
             ->with('success', 'Votre demande de réservation a bien été prise en compte, notre équipe reviendra vers vous par Mail pour vous confirmer cette dernière');
     }

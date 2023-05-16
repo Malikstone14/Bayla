@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('ingredient');
             $table->integer('prix');
             $table->boolean('active')->default(1);
+            $table->enum('section', ['tapas', 'plat', 'dessert']);
             $table->integer('ordre');
             $table->timestamps();
         });

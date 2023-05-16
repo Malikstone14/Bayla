@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('chemin');
             $table->boolean('active')->default(1);
             $table->string('URL');
+            $table->string('image')->default("logo.png");
             $table->timestamps();
         });
     }

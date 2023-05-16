@@ -6,10 +6,10 @@
     <div class="row">
         <div id="footer-contact" class="block-foot col-md-12 col-lg-4 col-xl-4 col-xs-12 col-ms-12">
 
-            <p>Bayla Restaurant <br>
-                47 Rue Écuyère, 14000 Caen <br>
+            <p style="color: white">Bayla, la Belle <br>
+                47 Rue ecuyère, 14000 Caen <br>
                 02.31.91.20.83 <br>
-                <a href="reservation">Réservation</a>
+                <a class="resafooter" href="reservation">Réservation</a>
             </p>
         </div>
 

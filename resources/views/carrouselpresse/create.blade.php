@@ -17,18 +17,10 @@
             </div>
         @endif
 
-        <form action="{{ route('carrouselpresse.store') }}" method="POST">
+        <form action="{{ route('carrouselpresse.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="container-edit">
-                {{-- <div class="row col-12">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Texte</strong>
-                            <textarea type="text" name="texte" value="" class="form-control" placeholder="Saisir un texte"></textarea>
-                        </div>
-                    </div>
-                </div> --}}
                 <div class="row col-12">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
@@ -69,7 +61,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Inserer une nouvelle image</strong>
-                            <input type="file" name="chemin" value="" class="form-control">
+                            <input type="file" name="image" id="image" value="" class="form-control">
                         </div>
                     </div>
                 </div>
