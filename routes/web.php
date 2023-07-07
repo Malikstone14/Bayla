@@ -39,9 +39,9 @@ Route::get('carte', function () {
     // APPELLE TOUTES LES REQUETES NECESSAIRE A L'AFFICHAGE DU MENU DU MIDI
 
     $cartemidi = CarteMidi::all();
-    $cartemidientree = CarteMidi::where('section', 'entree' )->where('active', 1)->orderby('ordre', 'asc')->get();
-    $cartemidiplat = CarteMidi::where('section', 'plat' )->where('active', 1)->orderby('ordre', 'asc')->get();
-    $cartemididessert = CarteMidi::where('section', 'dessert' )->where('active', 1)->orderby('ordre', 'asc')->get();
+    $cartemidientree = CarteMidi::where('section', 'entree')->where('active', 1)->orderby('ordre', 'asc')->get();
+    $cartemidiplat = CarteMidi::where('section', 'plat')->where('active', 1)->orderby('ordre', 'asc')->get();
+    $cartemididessert = CarteMidi::where('section', 'dessert')->where('active', 1)->orderby('ordre', 'asc')->get();
 
     //APPELLE TOUTES LES REQUETES NECESSAIRE A L'AFFICHAGE DE LA CARTE DES VINS
 
@@ -54,9 +54,9 @@ Route::get('carte', function () {
     //APPELLE TOUTES LES REQUETES NECESSAIRE A L'AFFICHAGE DE LA CARTE DES TAPAS
 
     $carteapero = CarteApero::orderBy('ordre', 'asc')->where('active', 1)->get();
-    $carteaperotapas = CarteApero::where('section', 'tapas' )->where('active', 1)->orderby('ordre', 'asc')->get();
-    $carteaperoplat = CarteApero::where('section', 'plat' )->where('active', 1)->orderby('ordre', 'asc')->get();
-    $carteaperodessert = CarteApero::where('section', 'dessert' )->where('active', 1)->orderby('ordre', 'asc')->get();
+    $carteaperotapas = CarteApero::where('section', 'tapas')->where('active', 1)->orderby('ordre', 'asc')->get();
+    $carteaperoplat = CarteApero::where('section', 'plat')->where('active', 1)->orderby('ordre', 'asc')->get();
+    $carteaperodessert = CarteApero::where('section', 'dessert')->where('active', 1)->orderby('ordre', 'asc')->get();
 
     //APPELLE TOUTES LES REQUETES NECESSAIRE A L'AFFICHAGE DE LA CARTE COCKTAIL
 
@@ -75,7 +75,7 @@ Route::get('carte', function () {
     $carteboissonchaude = CarteBoisson::where('section', 'chaude')->where('active', 1)->orderby('ordre', 'asc')->get();
 
 
-    return view('carte', compact('carteboissonchaude','carteboissonfraiche','carteboisson','cartechampagne','cartegin','cartespiritueux','cartebierebout','cartebierepress','cartesignature','cartealcool','cartemidi','cartemidientree', 'cartemidiplat', 'cartemididessert', 'cartevin', 'cartevinrouge', 'cartevinblanc', 'cartevinrose', 'cartevinchampagne', 'carteapero','carteaperotapas','carteaperoplat','carteaperodessert'));
+    return view('carte', compact('carteboissonchaude', 'carteboissonfraiche', 'carteboisson', 'cartechampagne', 'cartegin', 'cartespiritueux', 'cartebierebout', 'cartebierepress', 'cartesignature', 'cartealcool', 'cartemidi', 'cartemidientree', 'cartemidiplat', 'cartemididessert', 'cartevin', 'cartevinrouge', 'cartevinblanc', 'cartevinrose', 'cartevinchampagne', 'carteapero', 'carteaperotapas', 'carteaperoplat', 'carteaperodessert'));
 });
 Route::get('contact', function () {
     return view('contact');
@@ -104,7 +104,6 @@ Route::resource('hometexte', HomeTexteController::class)->middleware('auth');
 Route::resource('carrouselpresse', CarrouselPresseController::class)->middleware('auth');
 Route::resource('cartemidi', CarteMidiController::class)->middleware('auth');
 Route::resource('carteapero', CarteAperoController::class)->middleware('auth');
-Route::resource('user', UserController::class)->middleware('auth');
 Route::resource('cartealcool', CarteAlcoolController::class)->middleware('auth');
 Route::resource('carteboisson', CarteBoissonController::class)->middleware('auth');
 

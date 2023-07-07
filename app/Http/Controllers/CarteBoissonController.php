@@ -17,8 +17,8 @@ class CarteBoissonController extends Controller
         $carteboisson = CarteBoisson::all();
         $carteboissonfraiche = CarteBoisson::where('section', 'fraiche')->where('active', 1)->orderby('ordre', 'asc')->get();
         $carteboissonchaude = CarteBoisson::where('section', 'chaude')->where('active', 1)->orderby('ordre', 'asc')->get();
-    
-            return view('carteboisson.index', compact('carteboissonchaude','carteboissonfraiche','carteboisson'));
+
+        return view('carteboisson.index', compact('carteboissonchaude', 'carteboissonfraiche', 'carteboisson'));
     }
 
     /**
@@ -57,7 +57,7 @@ class CarteBoissonController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\CarteBoisson  $carteBoisson
-     * @return \Illuminate\Http\Response
+     * @return Illuminate\Contracts\View\View.
      */
     public function show(CarteBoisson $carteboisson)
     {

@@ -46,14 +46,14 @@ class CarrouselController extends Controller
             'ordre' => 'required',
             'URL' => 'required'
         ]);
-        $image= $request->file('image')->storeAs('public/image',$request->file('image')->getClientOriginalName());
-        $filename= $request->file('image')->getClientOriginalName();
-        $query= DB::table('Carrousels')->insert([
-            'image'=>$filename,
-            'URL'=>$request->input('URL'),
-            'titre'=>$request->input("titre"),
-            'texte'=>$request->input("texte"),
-            'ordre'=>$request->input("ordre")
+        $image = $request->file('image')->storeAs('public/image', $request->file('image')->getClientOriginalName());
+        $filename = $request->file('image')->getClientOriginalName();
+        $query = DB::table('Carrousels')->insert([
+            'image' => $filename,
+            'URL' => $request->input('URL'),
+            'titre' => $request->input("titre"),
+            'texte' => $request->input("texte"),
+            'ordre' => $request->input("ordre")
 
         ]);
 
@@ -61,8 +61,7 @@ class CarrouselController extends Controller
 
         return redirect()->route('carrousel.index')
             ->with('success', 'Onglet de carrousel créé avec succès.');
-    
-}
+    }
 
     /**
      * Display the specified resource.
@@ -83,7 +82,7 @@ class CarrouselController extends Controller
      */
     public function edit(Carrousel $carrousel, Request $request)
     {
-        
+
         return view('carrousel.edit', compact('carrousel'));
     }
 
@@ -103,18 +102,18 @@ class CarrouselController extends Controller
             'ordre' => 'required',
         ]);
 
-        $image= $request->file('image')->storeAs('public/image',$request->file('image')->getClientOriginalName());
-        $filename= $request->file('image')->getClientOriginalName();
-        $query= DB::table('Carrousels')
+        $image = $request->file('image')->storeAs('public/image', $request->file('image')->getClientOriginalName());
+        $filename = $request->file('image')->getClientOriginalName();
+        $query = DB::table('Carrousels')
             ->where('id', $carrousel_id)
             ->update([
-            'image'=>$filename,
-            'titre'=>$request->input("titre"),
-            'texte'=>$request->input("texte"),
-            'ordre'=>$request->input("ordre")
+                'image' => $filename,
+                'titre' => $request->input("titre"),
+                'texte' => $request->input("texte"),
+                'ordre' => $request->input("ordre")
 
-        ]);
-        
+            ]);
+
         return redirect()->route('carrousel.index')
             ->with('success', 'Votre carrousel a été mis à jour avec succès');
     }

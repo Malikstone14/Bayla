@@ -5,10 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\CarteMidi;
 use Illuminate\Http\Request;
 
-
 class CarteMidiController extends Controller
 {
-
     /**
      * Liste de tous les plats en les rangeants par catégorie, et par ordre mais aussi en prenant en compte leur visibilité.
      *
@@ -17,11 +15,11 @@ class CarteMidiController extends Controller
     public function index()
     {
         $cartemidi = CarteMidi::orderBy('ordre', 'asc')->get();
-        $cartemidientree = CarteMidi::where('section', 'entree' )->orderby('ordre', 'asc')->orderBy('active', 'desc')->get();
-        $cartemidiplat = CarteMidi::where('section', 'plat' )->orderby('ordre', 'asc')->orderBy('active', 'desc')->get();
-        $cartemididessert = CarteMidi::where('section', 'dessert' )->orderby('ordre', 'asc')->orderBy('active', 'desc')->get();
+        $cartemidientree = CarteMidi::where('section', 'entree')->orderby('ordre', 'asc')->orderBy('active', 'desc')->get();
+        $cartemidiplat = CarteMidi::where('section', 'plat')->orderby('ordre', 'asc')->orderBy('active', 'desc')->get();
+        $cartemididessert = CarteMidi::where('section', 'dessert')->orderby('ordre', 'asc')->orderBy('active', 'desc')->get();
 
-        return view('cartemidi.index', compact('cartemidi', 'cartemidientree','cartemidiplat', 'cartemididessert'))
+        return view('cartemidi.index', compact('cartemidi', 'cartemidientree', 'cartemidiplat', 'cartemididessert'))
             ->with('i', (request()->input('page', 1) - 1) * 4);
     }
 
@@ -64,7 +62,7 @@ class CarteMidiController extends Controller
      */
     public function edit(Cartemidi $cartemidi, Request $request)
     {
-        
+
         return view('cartemidi.edit', compact('cartemidi'));
     }
 

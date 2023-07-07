@@ -50,13 +50,13 @@ class CarrouselPresseController extends Controller
             'titre' => 'required',
             'ordre' => 'required',
         ]);
-        
-        $image= $request->file('image')->storeAs('public/image',$request->file('image')->getClientOriginalName());
-        $filename= $request->file('image')->getClientOriginalName();
-        $query= DB::table('Carrousel_presses')->insert([
-            'image'=>$filename,
-            'titre'=>$request->input("titre"),
-            'ordre'=>$request->input("ordre")
+
+        $image = $request->file('image')->storeAs('public/image', $request->file('image')->getClientOriginalName());
+        $filename = $request->file('image')->getClientOriginalName();
+        $query = DB::table('Carrousel_presses')->insert([
+            'image' => $filename,
+            'titre' => $request->input("titre"),
+            'ordre' => $request->input("ordre")
 
         ]);
 
@@ -64,17 +64,6 @@ class CarrouselPresseController extends Controller
 
         return redirect()->route('carrouselpresse.index')
             ->with('success', 'Onglet de carrousel créé avec succès.');
-    
-}
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\CarrouselPresse  $carrouselPresse
-     * @return \Illuminate\Http\Response
-     */
-    public function show(CarrouselPresse $carrouselPresse)
-    {
-        return view('carrouselpresse.show', compact('carrouselpresse'));
     }
 
     /**
@@ -85,7 +74,7 @@ class CarrouselPresseController extends Controller
      */
     public function edit(CarrouselPresse $carrouselpresse, Request $request)
     {
-        
+
         return view('carrouselpresse.edit', compact('carrouselpresse'));
     }
 
@@ -106,22 +95,21 @@ class CarrouselPresseController extends Controller
             'image' => 'required'
         ]);
 
-        
-        $image= $request->file('image')->storeAs('public/image',$request->file('image')->getClientOriginalName());
-        $filename= $request->file('image')->getClientOriginalName();
-        $query= DB::table('carrousel_presses')
+
+        $image = $request->file('image')->storeAs('public/image', $request->file('image')->getClientOriginalName());
+        $filename = $request->file('image')->getClientOriginalName();
+        $query = DB::table('carrousel_presses')
             ->where('id', $carrousel_id)
             ->update([
-            'image'=>$filename,
-            'titre'=>$request->input("titre"),
-            'URL'=>$request->input("URL"),
-            'ordre'=>$request->input("ordre")
+                'image' => $filename,
+                'titre' => $request->input("titre"),
+                'URL' => $request->input("URL"),
+                'ordre' => $request->input("ordre")
 
-        ]);
-        
+            ]);
+
         return redirect()->route('carrouselpresse.index')
             ->with('success', 'Votre carrousel a été mis à jour avec succès');
-
     }
 
     /**

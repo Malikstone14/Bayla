@@ -21,7 +21,7 @@ class CarteAlcoolController extends Controller
         $cartegin = CarteAlcool::where('section', 'gin')->orderby('ordre', 'asc')->orderBy('active', 'desc')->get();
         $cartechampagne = CarteAlcool::where('section', 'champagne')->orderby('ordre', 'asc')->orderBy('active', 'desc')->get();
 
-        return view('cartealcool.index', compact('cartechampagne','cartegin','cartespiritueux','cartebiere','cartesignature','cartealcool'));
+        return view('cartealcool.index', compact('cartechampagne', 'cartegin', 'cartespiritueux', 'cartebiere', 'cartesignature', 'cartealcool'));
     }
 
     /**

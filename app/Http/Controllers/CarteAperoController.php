@@ -15,11 +15,11 @@ class CarteAperoController extends Controller
     public function index()
     {
         $carteapero = CarteApero::orderBy('ordre', 'asc')->orderBy('active', 'desc')->get();
-        $carteaperotapas = CarteApero::where('section', 'tapas' )->orderby('ordre', 'asc')->orderBy('active', 'desc')->get();
-        $carteaperoplat = CarteApero::where('section', 'plat' )->orderby('ordre', 'asc')->orderBy('active', 'desc')->get();
-        $carteaperodessert = CarteApero::where('section', 'dessert' )->orderby('ordre', 'asc')->orderBy('active', 'desc')->get();
+        $carteaperotapas = CarteApero::where('section', 'tapas')->orderby('ordre', 'asc')->orderBy('active', 'desc')->get();
+        $carteaperoplat = CarteApero::where('section', 'plat')->orderby('ordre', 'asc')->orderBy('active', 'desc')->get();
+        $carteaperodessert = CarteApero::where('section', 'dessert')->orderby('ordre', 'asc')->orderBy('active', 'desc')->get();
 
-        return view('carteapero.index', compact('carteapero','carteaperotapas','carteaperoplat','carteaperodessert'))
+        return view('carteapero.index', compact('carteapero', 'carteaperotapas', 'carteaperoplat', 'carteaperodessert'))
             ->with('i', (request()->input('page', 1) - 1) * 4);
     }
 
@@ -72,7 +72,7 @@ class CarteAperoController extends Controller
      * @param  \App\Models\carteapero  $carteapero
      * @return \Illuminate\Http\Response
      */
-    public function edit(CarteApero $carteapero , Request $request)
+    public function edit(CarteApero $carteapero, Request $request)
     {
         return view('carteapero.edit', compact('carteapero'));
     }

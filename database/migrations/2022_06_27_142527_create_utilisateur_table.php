@@ -17,7 +17,6 @@ return new class extends Migration
             $table->increments('id');
             $table->string('nom');
             $table->string('prénom');
-            $table->integer('numero');
             $table->string('email')->unique();
             $table->string('password');
             $table->boolean('profile')->default(0);
