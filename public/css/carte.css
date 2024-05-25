@@ -289,7 +289,7 @@ body {
 }
 .content:nth-child(1) .content-image:before {
   transition-delay: 0s;
-  background-image: url("/image/img3.jpg");
+  background-image: url("/image/shooting-bayla-juillet-2022-47.jpg");
 }
 .content:nth-child(2) {
   transform: translate3d(105.2083333333%, 0, 0);
@@ -306,7 +306,7 @@ body {
 }
 .content:nth-child(2) .content-image:before {
   transition-delay: 0.1s;
-  background-image: url("/image/img4.jpg");
+  background-image: url("/image/shooting-bayla-juillet-2022-31.jpg");
 }
 .content:nth-child(3) {
   transform: translate3d(210.4166666667%, 0, 0);
@@ -323,7 +323,7 @@ body {
 }
 .content:nth-child(3) .content-image:before {
   transition-delay: 0.2s;
-  background-image: url("/image/img2.jpg");
+  background-image: url("/image/shooting-bayla-juillet-2022-31.jpg");
 }
 .content:nth-child(4) {
   transform: translate3d(315.625%, 0, 0);
@@ -340,7 +340,7 @@ body {
 }
 .content:nth-child(4) .content-image:before {
   transition-delay: 0.3s;
-  background-image: url("/image/img5.jpg");
+  background-image: url("/image/shooting-bayla-juillet-2022-18.jpg");
 }
 .content:nth-child(5) {
   transform: translate3d(420.8333333333%, 0, 0);
@@ -357,7 +357,7 @@ body {
 }
 .content:nth-child(5) .content-image:before {
   transition-delay: 0.4s;
-  background-image: url("/image/img1.jpg");
+  background-image: url("/image/img4.jpg");
 }
 .content:hover .content-image:after {
   opacity: 0;
