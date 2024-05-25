@@ -1,6 +1,4 @@
-* {
-    text-decoration: none !important;
-}
+
 
 #presentation {
     margin-top: 10%;
@@ -11,7 +9,11 @@
 }
 
 .titrecarrousel{
+<<<<<<< HEAD
     font-size:xx-large;
+=======
+    font-size:x-large;
+>>>>>>> 8047d27340cb6319262ba1d9edf07d299c6c2df8
 }
 
 .separator {
@@ -64,7 +66,11 @@
     transform: translateY(0%);
     opacity: 0;
     transition: all .4s ease;
+<<<<<<< HEAD
     background: linear-gradient(15deg,#396a62, transparent 70%);
+=======
+    background: linear-gradient(15deg,#1b4977, transparent 70%);
+>>>>>>> 8047d27340cb6319262ba1d9edf07d299c6c2df8
     color: white;
     overflow: hidden;
 }
@@ -97,7 +103,11 @@ a {
 
 .grostitre {
     color: goldenrod;
+<<<<<<< HEAD
     font-family: 'Dancing Script', cursive;
+=======
+    font-family: 'Courier New', Courier, monospace;
+>>>>>>> 8047d27340cb6319262ba1d9edf07d299c6c2df8
     position: absolute;
     font-size: 700%;
     opacity: 0.2;
@@ -109,7 +119,11 @@ a {
 }
 
 .petittitre {
+<<<<<<< HEAD
     font-family: 'Dancing Script', cursive;
+=======
+    font-family: 'Courier New', Courier, monospace;
+>>>>>>> 8047d27340cb6319262ba1d9edf07d299c6c2df8
     z-index: 1;
     margin: 30px;
 }
@@ -124,7 +138,11 @@ a {
 
 .grostitrepresse {
     color: goldenrod;
+<<<<<<< HEAD
     font-family: 'Dancing Script', cursive;
+=======
+    font-family: 'Courier New', Courier, monospace;
+>>>>>>> 8047d27340cb6319262ba1d9edf07d299c6c2df8
     position: absolute;
     font-size: 700%;
     opacity: 0.2;
@@ -143,7 +161,11 @@ a {
 }
 
 p.policeDancing{
+<<<<<<< HEAD
     font-family: 'Great Vibes', cursive;
+=======
+    font-family: 'Courier New', Courier, monospace;
+>>>>>>> 8047d27340cb6319262ba1d9edf07d299c6c2df8
     font-size: xx-large;
 }
 
@@ -152,7 +174,11 @@ p.policeDancing{
 }
 
 .grostitreavis {
+<<<<<<< HEAD
     font-family: 'Dancing Script', cursive;
+=======
+    font-family: 'Courier New', Courier, monospace;
+>>>>>>> 8047d27340cb6319262ba1d9edf07d299c6c2df8
     color: goldenrod;
     position: absolute;
     font-size: 700%;
@@ -230,8 +256,13 @@ p.policeDancing{
 }
 
 .btn-presse{
+<<<<<<< HEAD
     background: linear-gradient( #396a62,#87b09e,#396a62) !important;
     border-color: #396a62 !important;
+=======
+    background: linear-gradient( #1b4977,#c8d7e0) !important;
+    border-color: #1b4977 !important;
+>>>>>>> 8047d27340cb6319262ba1d9edf07d299c6c2df8
     color: white;
 }
 

@@ -11,7 +11,11 @@
 
 .index-titre{
     color: goldenrod;
+<<<<<<< HEAD
     font-family: 'Dancing Script', cursive; ;
+=======
+    font-family: 'Courier New', Courier, monospace;
+>>>>>>> 8047d27340cb6319262ba1d9edf07d299c6c2df8
     text-align: center;
 }
 

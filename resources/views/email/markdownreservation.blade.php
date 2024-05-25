@@ -11,7 +11,11 @@
 
 <br>
 
+<<<<<<< HEAD
 <a href='http://127.0.0.1:8000/getconfirmation?name={{$_POST['name']}}&phone={{$_POST['phone']}}&date={{$_POST['date']}}&message={{$_POST['message']}}&heure={{$_POST['heure']}}&nbpersonne={{$_POST['nbpersonne']}}&email={{$_POST['email']}}'>Valider</a>
+=======
+<a href='https://Baylarestaurant.com/getconfirmation?name={{$_POST['name']}}&phone={{$_POST['phone']}}&date={{$_POST['date']}}&message={{$_POST['message']}}&heure={{$_POST['heure']}}&nbpersonne={{$_POST['nbpersonne']}}&email={{$_POST['email']}}'>Valider</a>
+>>>>>>> 8047d27340cb6319262ba1d9edf07d299c6c2df8
 
 <br>
 {{$_POST['name']}}

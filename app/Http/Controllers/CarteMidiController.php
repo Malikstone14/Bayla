@@ -26,7 +26,11 @@ class CarteMidiController extends Controller
     }
 
     /**
+<<<<<<< HEAD
      * Retourne la vue qui permet de taper les informations dans un formulaire pour la création d'un plat en BDD.
+=======
+     * Retourne la vue qui permet de récuperer les informations qui permet une création dans la BDD.
+>>>>>>> 8047d27340cb6319262ba1d9edf07d299c6c2df8
      *
      * @return \Illuminate\Http\Response
      */

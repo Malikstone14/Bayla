@@ -18,10 +18,14 @@
         <div class="block-foot col-md-12 col-lg-4 col-xl-4 col-xs-12 col-ms-12">
 
             <img src="/image/logo2.png" alt="logoB" style="padding-bottom: 3%" width="300" height="100"><br>
+<<<<<<< HEAD
             <a href="https://www.facebook.com/baylarestaurant">
+=======
+            <a target="_blank" href="https://www.facebook.com/baylarestaurant">
+>>>>>>> 8047d27340cb6319262ba1d9edf07d299c6c2df8
                 <box-icon name='facebook-circle' color='white' type='logo' animation='tada-hover'></box-icon>
             </a>
-            <a href="https://www.instagram.com/bayla_restaurant/?hl=fr">
+            <a target="_blank" href="https://www.instagram.com/bayla_restaurant/?hl=fr">
                 <box-icon name='instagram' color="white" type='logo' animation='tada-hover'></box-icon>
             </a>
 
