@@ -76,7 +76,9 @@
                             </select>
                         </div>
                     </div>
-                    <div style="margin-top:1%" class="row col-12">
+
+                    
+                    <div style="margin-top:1%" id="photohidden" class="row col-12">
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Inserer une nouvelle image (Conseil : 1900x888p)</strong>

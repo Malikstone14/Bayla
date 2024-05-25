@@ -41,7 +41,8 @@ body {
   top: 0;
   width: 19.2%;
   height: 100%;
-  background: #252525;
+  /* background: #252525; */
+  background: linear-gradient( #87b09e,#396a62);
   transition: transform 0.6s 0.7s, width 0.7s, opacity 0.6s 0.7s,
     z-index 0s 1.3s;
   will-change: transform, width, opacity;
@@ -289,7 +290,7 @@ body {
 }
 .content:nth-child(1) .content-image:before {
   transition-delay: 0s;
-  background-image: url("/image/shooting-bayla-juillet-2022-47.jpg");
+  background-image: url("/image/img3.jpg");
 }
 .content:nth-child(2) {
   transform: translate3d(105.2083333333%, 0, 0);
@@ -306,7 +307,7 @@ body {
 }
 .content:nth-child(2) .content-image:before {
   transition-delay: 0.1s;
-  background-image: url("/image/shooting-bayla-juillet-2022-31.jpg");
+  background-image: url("/image/img4.jpg");
 }
 .content:nth-child(3) {
   transform: translate3d(210.4166666667%, 0, 0);
@@ -323,7 +324,7 @@ body {
 }
 .content:nth-child(3) .content-image:before {
   transition-delay: 0.2s;
-  background-image: url("/image/shooting-bayla-juillet-2022-31.jpg");
+  background-image: url("/image/img2.jpg");
 }
 .content:nth-child(4) {
   transform: translate3d(315.625%, 0, 0);
@@ -340,7 +341,7 @@ body {
 }
 .content:nth-child(4) .content-image:before {
   transition-delay: 0.3s;
-  background-image: url("/image/shooting-bayla-juillet-2022-18.jpg");
+  background-image: url("/image/img5.jpg");
 }
 .content:nth-child(5) {
   transform: translate3d(420.8333333333%, 0, 0);
@@ -357,7 +358,7 @@ body {
 }
 .content:nth-child(5) .content-image:before {
   transition-delay: 0.4s;
-  background-image: url("/image/img4.jpg");
+  background-image: url("/image/img1.jpg");
 }
 .content:hover .content-image:after {
   opacity: 0;
@@ -556,6 +557,10 @@ button:focus {
 	box-shadow: inset 0px 3px 5px rgba(255,255,255,1), 0px 0px 10px rgba(0,0,0,0.25);
 }
 
+#phone::placeholder{
+  color: grey;
+}
+
 .choixcarte{
   margin-bottom: 7%;
   margin-top: 2%;
@@ -565,8 +570,92 @@ button:focus {
   display: none;
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1250px) {
+  .btn-edit-carte {
+    position: absolute;
+    margin-left: -8%;
+  }
+
+  #cartebiere .quantite {
+    display: flex;
+    font-size: 25%;
+    column-gap: 1vh;
+    justify-content: flex-end;
+  }
+
+
+
+  #cartebiere .prix {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    margin-right: 1%;
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 3vh;
+  }
+
+  #cartebiere .intitule {
+    width: 42%;
+    margin-right: 10%;
+  }
+
   .content-titulo {
     font-size: 1rem;
   }
+  .conteudo-general {
+    position: relative;
+    height: 58vh;
+    margin: 1%;
+    padding: 0%;
+  }
+
+  .content-text p.cartetitre{
+    text-align: center;
+    font-size:small;
+    font-family: 'Courier New', Courier, monospace;
+    
+  }
+
+  .conteudo-general.caixa--content-ativo .content-image {
+    width: calc(100vw - 0px);
+  }
+  .content-text p.carteingredient {
+    font-size:xx-small;
+    margin-bottom: 10%;
+  }
+.cartetitre{
+  margin-bottom: 2%;
+  margin-top: 5%;
+}
+
+.content-text h1{
+  font-size: xx-large;
+  margin-bottom: 12%;
+  text-align: center;
+}
+
+.content-text h3{
+  font-size: large;
+}
+
+.content.caixa-conteudo-ativo .content-botao-fechar {
+  z-index: 5;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0s 1.4s;
+  width: 6.5%;
+}
+
+.content-botao-fechar {
+  top: 0px;
+
+}
+
+.choixcarte{
+  text-align: center;
+}
+
+.bx-lg {
+  font-size: 1.5rem!important;
+}
 }

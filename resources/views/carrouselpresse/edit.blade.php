@@ -31,7 +31,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row col-12">
+                    {{-- <div class="row col-12">
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Texte</strong>
@@ -39,7 +39,7 @@
                                     class="form-control" placeholder="Saisir un texte">
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="row col-12">
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">

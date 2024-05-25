@@ -17,7 +17,7 @@
             </div>
         @endif
 
-        <form action="{{ route('carrouselpresse.store') }}" method="POST">
+        <form action="{{ route('carrousel.store') }}" method="POST">
             @csrf
 
             <div class="container-edit">
@@ -33,7 +33,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Titre</strong>
-                            <input type="text" name="titre" value="" class="form-control"
+                            <input required type="text" name="titre" value="" class="form-control"
                                 placeholder="Saisir le titre">
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                     <div class="col-xs-3 col-sm-3 col-md-3">
                         <div class="form-group">
                             <strong>Ordre</strong>
-                            <input type="number" name="ordre" value="" class="form-control"
+                            <input required type="number" name="ordre" value="" class="form-control"
                                 placeholder="Saisir un stock">
                         </div>
                     </div>
@@ -76,7 +76,7 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center pt-4">
                     <button type="submit" class="btn btn-primary">Soumettre</button>
-                    <a class="btn btn-danger" href="{{ route('carrouselpresse.index') }}"> Retour</a>
+                    <a class="btn btn-danger" href="{{ route('carrousel.index') }}"> Retour</a>
                 </div>
             </div>
         </form>

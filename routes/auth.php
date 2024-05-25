@@ -56,7 +56,5 @@ Route::middleware('auth')->group(function () {
                 ->name('logout');
 
     
-    Route::get('getconfirmation', function () {
-        return view('email.getconfirmation');
-    });
+
 });

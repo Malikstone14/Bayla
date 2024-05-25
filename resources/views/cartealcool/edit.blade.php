@@ -50,14 +50,14 @@
                         <div class="col-xs-3 col-sm-3 col-md-3">
                             <div class="form-group">
                                 <strong>Prix</strong>
-                                <input type="number" name="prix" value="{{ $cartealcool->prix }}" class="form-control"
+                                <input type="number" name="prix" value="{{ $cartealcool->prix }}" step="any" class="form-control"
                                     placeholder="Saisir un Prix">
                             </div>
                         </div>
                         <div class="col-xs-3 col-sm-3 col-md-3">
                             <div class="form-group">
                                 <strong>Prix 2</strong>
-                                <input type="number" name="prix2" value="{{ $cartealcool->prix2 }}" class="form-control"
+                                <input type="number" name="prix2" value="{{ $cartealcool->prix2 }}" step="any" class="form-control"
                                     placeholder="Saisir un Prix (facultatif)">
                             </div>
                         </div>

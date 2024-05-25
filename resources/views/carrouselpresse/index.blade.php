@@ -15,7 +15,6 @@
         <table class="table table-bordered">
             <tr>
                 <th>Titre</th>
-                <th>Texte</th>
                 <th>Ordre</th>
                 <th>Image</th>
                 <th>Redirection</th>
@@ -25,7 +24,6 @@
             @foreach ($carrouselpresse as $article)
                 <tr>
                     <td>{{ $article->titre }}</td>
-                    <td>{{ $article->texte }}</td>
                     <td>{{ $article->ordre }}</td>
                     <td><img class='img-index' src="/image/{{ $article->chemin }}" alt="{{ $article->chemin }}">
                     </td>

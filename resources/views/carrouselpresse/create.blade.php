@@ -21,14 +21,14 @@
             @csrf
 
             <div class="container-edit">
-                <div class="row col-12">
+                {{-- <div class="row col-12">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Texte</strong>
                             <textarea type="text" name="texte" value="" class="form-control" placeholder="Saisir un texte"></textarea>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <div class="row col-12">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">

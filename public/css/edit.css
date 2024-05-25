@@ -17,6 +17,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-image: url(/image/slide2.jpg);
+    
 }
 
 form {
@@ -27,3 +28,13 @@ form {
 h2 {
     color: rgb(1, 82, 58);
 }
+
+/* #editphoto{
+    display: block;
+    visibility: visible;
+}
+
+#photohidden{
+    visibility: hidden;
+    display: none;
+} */

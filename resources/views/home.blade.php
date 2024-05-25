@@ -14,21 +14,19 @@
         <div class="carousel-inner">
 
             @foreach ($carrouselActive as $key => $ongletCarrousel)
+            
                 <div class="carousel-item {{ $key == 0 ? 'active' : '' }}" data-interval="4000">
                     <img src="/image/{{ $ongletCarrousel->chemin }}" alt="{{ $ongletCarrousel->chemin }}"
                         class="d-block w-100">
                     <div class="text-container carousel-caption">
                         <a href="{{ $ongletCarrousel->URL }}">
-                            <h4>{{ $ongletCarrousel->titre }}</h4>
+                            <h4 class="policeDancing titrecarrousel">{{ $ongletCarrousel->titre }}</h4>
                             <p>{{ $ongletCarrousel->texte }}</p>
                         </a>
                     </div>
                 </div>
             @endforeach
         </div>
-
-    </div>
-
     <!-- Contrôles -->
     <a class="carousel-control-prev" href="#carrousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -38,6 +36,9 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only"></span>
     </a>
+    </div>
+
+
 
     <div id="presentation">
         @auth
@@ -64,7 +65,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label">Texte</label>
-                                    <textarea class="form-control" name="home_texte" value="{{ $homeTexte[0]->home_texte }}" id="message-text">{{ $homeTexte[0]->home_texte }}</textarea>
+                                    <textarea class="form-control" name="home_texte" maxlength="500" value="{{ $homeTexte[0]->home_texte }}" id="message-text">{{ $homeTexte[0]->home_texte }}</textarea>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -84,7 +85,7 @@
         <br>
         <h1 class="petittitre">{{ $homeTexte[0]->home_titre }}</h1>
 
-        <p>{{ $homeTexte[0]->home_texte }}
+        <p class="police">{{ $homeTexte[0]->home_texte }}
         </p>
         <hr class="separator">
     </div>
@@ -97,7 +98,7 @@
     @endauth
     <div id="presentation-article">
 
-        <div class="grostitre presse">Presse</div>
+        <div class="grostitrepresse">Presse</div>
         <br>
         <br>
         <h1 class="petittitre">On parle de nous !</h1>
@@ -143,7 +144,7 @@
     </div>
     </div>
     <div id="presentation-article">
-        <div class="grostitre avis">Vos Avis</div>
+        <div class="grostitreavis">Vos Avis</div>
         <br>
         <br>
         <h1 class="petittitre">Parce que votre avis compte !</h1>

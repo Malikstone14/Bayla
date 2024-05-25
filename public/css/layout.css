@@ -4,13 +4,19 @@
 
 html{
     overflow-x: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.policeDancing{
+    font-family: 'Dancing Script', cursive;
 }
 
 footer {
     margin-top: 12%;
     width: 100%;
     height: 25%;
-    background-color: rgb(27, 26, 26);
+    /* background-color: rgb(27, 26, 26); */
+    background: linear-gradient( #87b09e,#396a62);
 }
 
 .block-foot {
@@ -20,28 +26,105 @@ footer {
     color: aliceblue;
 }
 
+
 .bi-footer {
     color: aliceblue;
 }
 
 li {
-    padding-right: 10%;
+    width: 14.8%;
 }
 
-.first-item {
-    margin-left: 5%;
+.first-item{
+    margin-left: -3%;
 }
 
-.logo-item {
-    margin-top: 0.5%;
+.nav-item.logo-item {
+    margin-top: 1%;
+    display: block;
+}
+
+.navbar-expand-lg .navbar-nav{
+    width: 100%;
+}
+
+.logo{
+    display: none;
 }
 
 .navbar {
+    background: linear-gradient( #396a62,#87b09e);
     width: 100%;
-    background-color: rgb(27, 26, 26);
+    /* background-color: rgb(27, 26, 26); */
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
 
+.logo{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.nav-item{
+    width: 14.8%;
+    text-align: center;
+}
+.nav-item.logo{
+    display: block;
+}
+
 .nav-link {
+    
     color: white !important;
+    font-family: 'Dancing Script', cursive;
+    font-size: x-large;
+}
+.reseaulogo{
+    display: none;
+}
+
+.btn-warning {
+    color: #fff;
+}
+.btn-warning:hover{
+    color: #fff;
+}
+
+.logonav{
+    margin: 0;
+}
+
+@media only screen and (max-width: 950px){
+
+
+.logo{
+    display: block;
+}
+
+.nav-item.logo{
+    display: none;
+}
+
+.nav-item{
+    width: 100%;
+    text-align: center;
+}
+
+.logo{
+    display: block;
+    text-align: center;
+    width: 55%;
+}
+
+.first-item{
+    margin-left: 0%;
+}
+
+.nav-item.logo-item {
+    display: none;
+}
+
+.reseaulogo{
+    display: block;
+}
+
 }

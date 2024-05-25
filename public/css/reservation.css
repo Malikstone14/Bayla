@@ -135,10 +135,10 @@ h2 {
 
 :root {
     --primary-color: #010712;
-    --secondary-color: #396a62;
+    --secondary-color: goldenrod;
     --bg-color: #FCFDFD;
-    --button-color: #396a62;
-    --h1-color: #396a62;
+    --button-color: goldenrod;
+    --h1-color: goldenrod;
 }
 
 [data-theme="dark"] {
@@ -163,8 +163,7 @@ h2 {
 }
 
 .left-col {
-    margin-left: 5%;
-    width: 45vw;
+    width: 50%;
     height: 100%;
     background-image: url("/image/img3.jpg");
     background-size: cover;
@@ -189,14 +188,15 @@ button,
 
 h1 {
     color: var(--h1-color);
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
+    font-family: 'Dancing Script', cursive;
     font-size: 2.5rem;
     letter-spacing: 0.5rem;
     font-weight: 300;
 }
 
 p {
-    color: var(--secondary-color);
+    color: white;
     font-size: 0.9rem;
     letter-spacing: 0.01rem;
     width: 40vw;
@@ -220,7 +220,7 @@ form {
 input,
 textarea,
 label {
-    width: 40vw;
+    width: 100%;
     display: block;
 }
 
@@ -354,6 +354,10 @@ input:checked+.slider:before {
 }
 
 @media only screen and (max-width: 950px) {
+    .left-col {
+        display: none;
+    }
+
     .logo {
         width: 8rem;
     }
@@ -363,8 +367,13 @@ input:checked+.slider:before {
     }
 
     p {
-        font-size: 0.7rem;
+        /* font-size: 0.7rem; */
+        font-size: inherit;
     }
+
+    .navbar-toggler{
+        width: 16.5%;
+      }
 
     input,
     textarea,
@@ -377,9 +386,7 @@ input:checked+.slider:before {
         margin-left: 0.4rem;
     }
 
-    button {
-        width: 7rem;
-    }
+
 
     .theme-switch-wrapper {
         width: 120px;
@@ -417,5 +424,31 @@ input:checked+.slider:before {
         border-radius: 50%;
     }
 
+    .right-col {
+        background: var(--bg-color);
+        width: 100%;
+        height: 75%;
+        padding: 5rem 3.5rem;
+    }
+    form {
+        width: 100%;
+        position: relative;
+        margin-top: 2rem;
+        padding: 1rem 0;
+        margin-bottom: 10%;
+    }
+    .contact-form{
+        margin-bottom: 10%;
+    }
+    footer{
+        margin-top: 46% !important;
+    }
+    p{
+        text-align: center;
+        width: 100%;
+        color: #fff;
+    }
+    input, textarea, label {
+        width: 100%;
 }
-
+}

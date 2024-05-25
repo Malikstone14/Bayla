@@ -10,6 +10,10 @@
 
 }
 
+.titrecarrousel{
+    font-size:xx-large;
+}
+
 .separator {
     margin-top: 5%;
     margin-bottom: 5%;
@@ -55,13 +59,12 @@
 
 
 .text-container {
-    width: 100%;
-    padding-bottom: 4rem;
+    height: fit-content;
     visibility: hidden;
     transform: translateY(0%);
     opacity: 0;
     transition: all .4s ease;
-    background: linear-gradient(15deg, black 10%, transparent 60%);
+    background: linear-gradient(15deg,#396a62, transparent 70%);
     color: white;
     overflow: hidden;
 }
@@ -93,28 +96,42 @@ a {
 }
 
 .grostitre {
+    color: goldenrod;
+    font-family: 'Dancing Script', cursive;
     position: absolute;
     font-size: 700%;
-    opacity: 0.1;
-    letter-spacing: 4rem;
+    opacity: 0.2;
     text-transform: uppercase;
-    color: teal;
+    overflow-x:hidden;
+    /* color: teal; */
     width: 75%;
+    display: block;
 }
 
 .petittitre {
+    font-family: 'Dancing Script', cursive;
     z-index: 1;
     margin: 30px;
 }
 
-.grostitre.presse {
+.stretch_it{
+    white-space: nowrap;
+}
+
+#presentation{
+    height: 10%;
+}
+
+.grostitrepresse {
+    color: goldenrod;
+    font-family: 'Dancing Script', cursive;
     position: absolute;
     font-size: 700%;
-    opacity: 0.1;
-    letter-spacing: 5rem;
+    opacity: 0.2;
     text-transform: uppercase;
-    color: teal;
+    /* color: teal; */
     width: 75%;
+    display: block;
 }
 
 
@@ -125,18 +142,25 @@ a {
     text-align: center;
 }
 
+p.policeDancing{
+    font-family: 'Great Vibes', cursive;
+    font-size: xx-large;
+}
+
 .widget-avis {
     padding-top: 5%;
 }
 
-.grostitre.avis {
+.grostitreavis {
+    font-family: 'Dancing Script', cursive;
+    color: goldenrod;
     position: absolute;
     font-size: 700%;
-    opacity: 0.1;
-    letter-spacing: 5rem;
+    opacity: 0.2;
     text-transform: uppercase;
-    color: teal;
+    /* color: teal; */
     width: 75%;
+    display: block;
 }
 
 
@@ -149,7 +173,7 @@ a {
 } */
 
 #presentationarticle {
-
+    
     display: grid;
     place-items: center;
 }
@@ -206,8 +230,8 @@ a {
 }
 
 .btn-presse{
-    background-color: teal !important;
-    border-color: teal !important;
+    background: linear-gradient( #396a62,#87b09e,#396a62) !important;
+    border-color: #396a62 !important;
     color: white;
 }
 
@@ -231,4 +255,59 @@ a {
 
 .alert{
     margin-bottom: 0;
+}
+
+@media only screen and (max-width: 950px){
+
+.grostitre{
+    display: none;
+}
+
+.grostitrepresse{
+    display: none;
+}
+
+.grostitreavis{
+    display: none;
+}
+
+.card {
+    width: 85%;
+    height: 100%;
+    object-fit: cover;
+
+    -webkit-box-reflect:unset ;
+
+    transform-origin: center;
+    transform: perspective(0px) rotateY(0deg);
+    transition: 0.5s;
+}
+
+.titrecarrousel {
+    font-size: 140%;
+}
+
+.text-container p{
+    font-size: 66%;
+    margin-bottom: 0%;
+}
+
+#presentation {
+    margin-top: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+}
+
+.carousel.presse {
+    width: 100%;
+}
+
+#presentation-article {
+    margin-top: 0%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+}
+
 }
